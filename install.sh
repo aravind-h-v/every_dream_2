@@ -33,6 +33,7 @@ conda install -c conda-forge \
 ;
 
 pip install -U \
+    'accelerate' \
     'aiohttp' \
     'alive-progress' \
     'bitsandbytes' \

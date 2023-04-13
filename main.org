@@ -75,18 +75,15 @@
 #+end_src
 
 #+RESULTS:
-#+begin_example
-removed '.main.org.~undo-tree~'
-removed '.README.org.~undo-tree~'
-On branch master
-Your branch is up to date with 'origin/master'.
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   README.org
-	modified:   main.org
-
-#+end_example
+: removed '.main.org.~undo-tree~'
+: On branch master
+: Your branch is up to date with 'origin/master'.
+: 
+: Changes to be committed:
+:   (use "git restore --staged <file>..." to unstage)
+: 	modified:   install.sh
+: 	modified:   main.org
+: 
 
 ** Commit the changes and push:
 #+begin_src sh :shebang #!/bin/sh :results output
@@ -96,6 +93,6 @@ Changes to be committed:
 #+end_src
 
 #+RESULTS:
-: [master 9abdff4] Minor changes to clone git repo
-:  2 files changed, 16 insertions(+), 24 deletions(-)
+: [master 01e0c15] Minor changes to clone git repo
+:  2 files changed, 4 insertions(+), 6 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

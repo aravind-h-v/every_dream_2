@@ -69,6 +69,7 @@ https://github.com/victorchall/EveryDream2trainer.git
 ** Install pip stuff:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
   pip install -U \
+      'accelerate' \
       'aiohttp' \
       'alive-progress' \
       'bitsandbytes' \
@@ -99,3 +100,12 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
   git clone 'https://github.com/victorchall/EveryDream2trainer.git'
 #+end_src
+
+
+** Save the buffer and tangle the files:
+#+begin_src emacs-lisp :results output
+  (save-buffer) 
+  (org-babel-tangle)
+#+end_src
+
+#+RESULTS:
