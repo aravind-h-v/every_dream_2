@@ -1,0 +1,90 @@
+* Git management related:
+
+** List of files to add, remove and ignore:
+
+*** The commit message:
+#+begin_src conf :tangle message.txt
+  First commit
+#+end_src
+
+*** Files to add:
+#+begin_src conf :tangle git_add.txt
+  main.org
+  .gitignore
+  README.org
+#+end_src
+
+*** Files to remove:
+#+begin_src conf :tangle rm.txt
+  .#main.org
+  .main.org.~undo-tree~
+  #main.org#
+  main.org~
+  .README.org.~undo-tree~
+#+end_src
+
+*** Files to ignore:
+#+begin_src conf :tangle .gitignore
+  EveryDream2trainer
+  git_add.sh
+  git_add.txt
+  #main.org#
+  message.txt
+  #README.org#
+  README.org~
+  rm.sh
+  rm.txt
+  shrc_activate.sh
+  shrc_install.sh
+  tmp.sh
+#+end_src
+
+** The actual scripts to do the dirty work:
+
+*** Files to add:
+#+begin_src sh :shebang #!/bin/sh :tangle git_add.sh :results output
+  sed "s/^/(git add '/g ; s/\$/');/g" 'git_add.txt' | sh
+#+end_src
+
+*** Files to remove:
+#+begin_src sh :shebang #!/bin/sh :tangle rm.sh :results output
+  sed "s/^/(rm -vf -- '/g ; s/\$/');/g" 'rm.txt' | sh
+#+end_src
+
+** Make all the changes and check status:
+
+*** This file stuff:
+#+begin_src emacs-lisp :results output
+  (save-buffer) 
+  (save-some-buffers) 
+  (org-babel-tangle)
+#+end_src
+
+#+RESULTS:
+
+*** Run the git management parts:
+#+begin_src sh :shebang #!/bin/sh :results output
+  ./git_add.sh
+  ./rm.sh
+  git status
+#+end_src
+
+#+RESULTS:
+: removed '.README.org.~undo-tree~'
+: On branch main
+: Your branch is up to date with 'origin/main'.
+: 
+: Changes to be committed:
+:   (use "git restore --staged <file>..." to unstage)
+: 	modified:   README.org
+: 
+
+** Commit the changes and push:
+#+begin_src sh :shebang #!/bin/sh :results output
+  git commit -m "$(cat 'message.txt')"
+  git push 
+#+end_src
+
+#+RESULTS:
+: [main 679ba66] Rearrangement and management stuff
+:  1 file changed, 3 insertions(+)
