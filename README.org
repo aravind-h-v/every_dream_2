@@ -96,6 +96,6 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+end_src
 
 ** clone the repo:
-#+begin_src sh :shebang #!/bin/sh
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
   git clone 'https://github.com/victorchall/EveryDream2trainer.git'
 #+end_src
