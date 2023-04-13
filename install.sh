@@ -61,6 +61,8 @@ pip install -U \
 
 git clone 'https://github.com/victorchall/EveryDream2trainer.git'
 
+cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+
 python ./train.py \
     '--batch_size=2' \
     '--ckpt_every_n_minutes=20' \

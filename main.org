@@ -14,6 +14,7 @@
   README.org
   activate.sh
   install.sh
+  configs.py
 #+end_src
 
 *** Files to remove:
@@ -87,6 +88,10 @@ Changes to be committed:
 	modified:   install.sh
 	modified:   main.org
 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	
+
 #+end_example
 
 ** Commit the changes and push:
@@ -97,6 +102,6 @@ Changes to be committed:
 #+end_src
 
 #+RESULTS:
-: [master 9c0d300] Minor changes to clone git repo
-:  3 files changed, 22 insertions(+), 14 deletions(-)
+: [master 1c46500] Minor changes to clone git repo 2
+:  3 files changed, 105 insertions(+), 12 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.
