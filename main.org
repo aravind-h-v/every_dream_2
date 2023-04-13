@@ -84,8 +84,6 @@ Your branch is up to date with 'origin/master'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   README.org
-	new file:   activate.sh
-	new file:   install.sh
 	modified:   main.org
 
 #+end_example
@@ -98,8 +96,6 @@ Changes to be committed:
 #+end_src
 
 #+RESULTS:
-: [master 18cc5ae] Minor changes
-:  4 files changed, 142 insertions(+), 13 deletions(-)
-:  create mode 100755 activate.sh
-:  create mode 100755 install.sh
+: [master 9abdff4] Minor changes to clone git repo
+:  2 files changed, 16 insertions(+), 24 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

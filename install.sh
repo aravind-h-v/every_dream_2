@@ -57,3 +57,5 @@ pip install -U \
     'watchdog' \
     'xformers' \
 ;
+
+git clone 'https://github.com/victorchall/EveryDream2trainer.git'
