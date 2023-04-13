@@ -4,6 +4,21 @@
 ** Everydream2 code:
 https://github.com/victorchall/EveryDream2trainer.git
 
+* Env activate parts:
+
+** Create and activate the env:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./activate.sh
+  . /opt/anaconda/bin/activate
+  conda activate everydream
+#+end_src
+
+** Create directory and CD to it:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./activate.sh
+  DIR="${HOME}/every_dream_2_setup"
+  mkdir -pv -- "${DIR}"
+  cd "${DIR}"
+#+end_src
+
 * Env setup parts:
 
 ** Create and activate the env:
@@ -32,7 +47,7 @@ https://github.com/victorchall/EveryDream2trainer.git
       numpy \
       opencv \
       pandas \
-      python=3.9 \
+      python=3.10 \
       scikit-learn \
       scikit-learn-intelex \
       scipy \
@@ -53,6 +68,31 @@ https://github.com/victorchall/EveryDream2trainer.git
 
 ** Install pip stuff:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
+  pip install -U \
+      'aiohttp' \
+      'alive-progress' \
+      'bitsandbytes' \
+      'colorama' \
+      'diffusers' \
+      'ftfy' \
+      'keyboard' \
+      'lion-pytorch' \
+      'matplotlib' \
+      'OmegaConf' \
+      'pynvml' \
+      'pyre-extensions' \
+      'pytorch-lightning' \
+      'tensorboard' \
+      'torch==1.13.1' \
+      'torchaudio==0.13.1' \
+      'torchvision==0.14.1' \
+      'tqdm' \
+      'transformers' \
+      'triton' \
+      'wandb' \
+      'watchdog' \
+      'xformers' \
+  ;
 #+end_src
 
 ** clone the repo:

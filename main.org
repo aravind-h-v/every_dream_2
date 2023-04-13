@@ -4,7 +4,7 @@
 
 *** The commit message:
 #+begin_src conf :tangle message.txt
-  First commit
+  Minor changes
 #+end_src
 
 *** Files to add:
@@ -12,6 +12,8 @@
   main.org
   .gitignore
   README.org
+  activate.sh
+  install.sh
 #+end_src
 
 *** Files to remove:
@@ -21,6 +23,9 @@
   #main.org#
   main.org~
   .README.org.~undo-tree~
+  .#main.org
+  .README.org.~undo-tree~
+  .main.org.~undo-tree~
 #+end_src
 
 *** Files to ignore:
@@ -70,21 +75,39 @@
 #+end_src
 
 #+RESULTS:
-: removed '.README.org.~undo-tree~'
-: On branch main
-: Your branch is up to date with 'origin/main'.
-: 
-: Changes to be committed:
-:   (use "git restore --staged <file>..." to unstage)
-: 	modified:   README.org
-: 
+#+begin_example
+removed '.#main.org'
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   .gitignore
+	new file:   README.org
+	new file:   main.org
+
+#+end_example
 
 ** Commit the changes and push:
 #+begin_src sh :shebang #!/bin/sh :results output
   git commit -m "$(cat 'message.txt')"
-  git push 
+  git remote add origin git@github.com:aravind-h-v/every_dream_2.git
+  git push -u origin master
 #+end_src
 
 #+RESULTS:
-: [main 679ba66] Rearrangement and management stuff
-:  1 file changed, 3 insertions(+)
+#+begin_example
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.org
+	modified:   main.org
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+#+end_example
