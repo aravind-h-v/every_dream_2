@@ -60,3 +60,21 @@ pip install -U \
 ;
 
 git clone 'https://github.com/victorchall/EveryDream2trainer.git'
+
+python ./train.py \
+    '--batch_size=2' \
+    '--ckpt_every_n_minutes=20' \
+    '--cond_dropout=0.04' \
+    '--data_root=input.dir' \
+    '--flip_p=0.0' \
+    '--gradient_checkpointing' \
+    '--grad_accum=1' \
+    '--logdir=log.dir' \
+    '--log_step=25' \
+    '--lowvram' \
+    '--lr=0.0000002' \
+    '--max_epochs=30' \
+    '--project_name=owhx' \
+    '--resolution=512' \
+    '--resume_ckpt=runwayml/stable-diffusion-v1-5' \
+;
