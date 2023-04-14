@@ -1,0 +1,1519 @@
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./copy_generated.sh
+  mkdir -pv DATA_NEW
+  FILE="$(ls "DATA/${1}/class/${2}.png")"
+  TYPE="$(echo "${FILE}" | cut -d '.' '-f2')"
+  HASH="$(crc32 "${FILE}" | cut -d ' ' -f1)"
+  cp -vf "${FILE}" "DATA_NEW/${HASH}.${TYPE}"
+  cp -vf "DATA/${1}/class/prompt.txt" "DATA_NEW/${HASH}.txt"
+#+end_src
+
+#+begin_src python :shebang #!/home/asd/.conda/envs/img2prompt/bin/python :results output
+  for i in range(113):
+      print('./copy_generated.sh ',i, ' 0')
+      print('./copy_generated.sh ',i, ' 1')
+      print('./copy_generated.sh ',i, ' 2')
+      print('./copy_generated.sh ',i, ' 3')
+      print('./copy_generated.sh ',i, ' 4')
+      print('./copy_generated.sh ',i, ' 5')
+      print('./copy_generated.sh ',i, ' 6')
+      print('./copy_generated.sh ',i, ' 7')
+      print('./copy_generated.sh ',i, ' 8')
+      print('./copy_generated.sh ',i, ' 9')
+#+end_src
+
+#+begin_src sh :shebang #!/bin/sh :results output
+  ./copy_generated.sh  0  0
+  ./copy_generated.sh  0  1
+  ./copy_generated.sh  0  2
+  ./copy_generated.sh  0  3
+  ./copy_generated.sh  0  4
+  ./copy_generated.sh  0  5
+  ./copy_generated.sh  0  6
+  ./copy_generated.sh  0  7
+  ./copy_generated.sh  0  8
+  ./copy_generated.sh  0  9
+  ./copy_generated.sh  1  0
+  ./copy_generated.sh  1  1
+  ./copy_generated.sh  1  2
+  ./copy_generated.sh  1  3
+  ./copy_generated.sh  1  4
+  ./copy_generated.sh  1  5
+  ./copy_generated.sh  1  6
+  ./copy_generated.sh  1  7
+  ./copy_generated.sh  1  8
+  ./copy_generated.sh  1  9
+  ./copy_generated.sh  2  0
+  ./copy_generated.sh  2  1
+  ./copy_generated.sh  2  2
+  ./copy_generated.sh  2  3
+  ./copy_generated.sh  2  4
+  ./copy_generated.sh  2  5
+  ./copy_generated.sh  2  6
+  ./copy_generated.sh  2  7
+  ./copy_generated.sh  2  8
+  ./copy_generated.sh  2  9
+  ./copy_generated.sh  3  0
+  ./copy_generated.sh  3  1
+  ./copy_generated.sh  3  2
+  ./copy_generated.sh  3  3
+  ./copy_generated.sh  3  4
+  ./copy_generated.sh  3  5
+  ./copy_generated.sh  3  6
+  ./copy_generated.sh  3  7
+  ./copy_generated.sh  3  8
+  ./copy_generated.sh  3  9
+  ./copy_generated.sh  4  0
+  ./copy_generated.sh  4  1
+  ./copy_generated.sh  4  2
+  ./copy_generated.sh  4  3
+  ./copy_generated.sh  4  4
+  ./copy_generated.sh  4  5
+  ./copy_generated.sh  4  6
+  ./copy_generated.sh  4  7
+  ./copy_generated.sh  4  8
+  ./copy_generated.sh  4  9
+  ./copy_generated.sh  5  0
+  ./copy_generated.sh  5  1
+  ./copy_generated.sh  5  2
+  ./copy_generated.sh  5  3
+  ./copy_generated.sh  5  4
+  ./copy_generated.sh  5  5
+  ./copy_generated.sh  5  6
+  ./copy_generated.sh  5  7
+  ./copy_generated.sh  5  8
+  ./copy_generated.sh  5  9
+  ./copy_generated.sh  6  0
+  ./copy_generated.sh  6  1
+  ./copy_generated.sh  6  2
+  ./copy_generated.sh  6  3
+  ./copy_generated.sh  6  4
+  ./copy_generated.sh  6  5
+  ./copy_generated.sh  6  6
+  ./copy_generated.sh  6  7
+  ./copy_generated.sh  6  8
+  ./copy_generated.sh  6  9
+  ./copy_generated.sh  7  0
+  ./copy_generated.sh  7  1
+  ./copy_generated.sh  7  2
+  ./copy_generated.sh  7  3
+  ./copy_generated.sh  7  4
+  ./copy_generated.sh  7  5
+  ./copy_generated.sh  7  6
+  ./copy_generated.sh  7  7
+  ./copy_generated.sh  7  8
+  ./copy_generated.sh  7  9
+  ./copy_generated.sh  8  0
+  ./copy_generated.sh  8  1
+  ./copy_generated.sh  8  2
+  ./copy_generated.sh  8  3
+  ./copy_generated.sh  8  4
+  ./copy_generated.sh  8  5
+  ./copy_generated.sh  8  6
+  ./copy_generated.sh  8  7
+  ./copy_generated.sh  8  8
+  ./copy_generated.sh  8  9
+  ./copy_generated.sh  9  0
+  ./copy_generated.sh  9  1
+  ./copy_generated.sh  9  2
+  ./copy_generated.sh  9  3
+  ./copy_generated.sh  9  4
+  ./copy_generated.sh  9  5
+  ./copy_generated.sh  9  6
+  ./copy_generated.sh  9  7
+  ./copy_generated.sh  9  8
+  ./copy_generated.sh  9  9
+  ./copy_generated.sh  10  0
+  ./copy_generated.sh  10  1
+  ./copy_generated.sh  10  2
+  ./copy_generated.sh  10  3
+  ./copy_generated.sh  10  4
+  ./copy_generated.sh  10  5
+  ./copy_generated.sh  10  6
+  ./copy_generated.sh  10  7
+  ./copy_generated.sh  10  8
+  ./copy_generated.sh  10  9
+  ./copy_generated.sh  11  0
+  ./copy_generated.sh  11  1
+  ./copy_generated.sh  11  2
+  ./copy_generated.sh  11  3
+  ./copy_generated.sh  11  4
+  ./copy_generated.sh  11  5
+  ./copy_generated.sh  11  6
+  ./copy_generated.sh  11  7
+  ./copy_generated.sh  11  8
+  ./copy_generated.sh  11  9
+  ./copy_generated.sh  12  0
+  ./copy_generated.sh  12  1
+  ./copy_generated.sh  12  2
+  ./copy_generated.sh  12  3
+  ./copy_generated.sh  12  4
+  ./copy_generated.sh  12  5
+  ./copy_generated.sh  12  6
+  ./copy_generated.sh  12  7
+  ./copy_generated.sh  12  8
+  ./copy_generated.sh  12  9
+  ./copy_generated.sh  13  0
+  ./copy_generated.sh  13  1
+  ./copy_generated.sh  13  2
+  ./copy_generated.sh  13  3
+  ./copy_generated.sh  13  4
+  ./copy_generated.sh  13  5
+  ./copy_generated.sh  13  6
+  ./copy_generated.sh  13  7
+  ./copy_generated.sh  13  8
+  ./copy_generated.sh  13  9
+  ./copy_generated.sh  14  0
+  ./copy_generated.sh  14  1
+  ./copy_generated.sh  14  2
+  ./copy_generated.sh  14  3
+  ./copy_generated.sh  14  4
+  ./copy_generated.sh  14  5
+  ./copy_generated.sh  14  6
+  ./copy_generated.sh  14  7
+  ./copy_generated.sh  14  8
+  ./copy_generated.sh  14  9
+  ./copy_generated.sh  15  0
+  ./copy_generated.sh  15  1
+  ./copy_generated.sh  15  2
+  ./copy_generated.sh  15  3
+  ./copy_generated.sh  15  4
+  ./copy_generated.sh  15  5
+  ./copy_generated.sh  15  6
+  ./copy_generated.sh  15  7
+  ./copy_generated.sh  15  8
+  ./copy_generated.sh  15  9
+  ./copy_generated.sh  16  0
+  ./copy_generated.sh  16  1
+  ./copy_generated.sh  16  2
+  ./copy_generated.sh  16  3
+  ./copy_generated.sh  16  4
+  ./copy_generated.sh  16  5
+  ./copy_generated.sh  16  6
+  ./copy_generated.sh  16  7
+  ./copy_generated.sh  16  8
+  ./copy_generated.sh  16  9
+  ./copy_generated.sh  17  0
+  ./copy_generated.sh  17  1
+  ./copy_generated.sh  17  2
+  ./copy_generated.sh  17  3
+  ./copy_generated.sh  17  4
+  ./copy_generated.sh  17  5
+  ./copy_generated.sh  17  6
+  ./copy_generated.sh  17  7
+  ./copy_generated.sh  17  8
+  ./copy_generated.sh  17  9
+  ./copy_generated.sh  18  0
+  ./copy_generated.sh  18  1
+  ./copy_generated.sh  18  2
+  ./copy_generated.sh  18  3
+  ./copy_generated.sh  18  4
+  ./copy_generated.sh  18  5
+  ./copy_generated.sh  18  6
+  ./copy_generated.sh  18  7
+  ./copy_generated.sh  18  8
+  ./copy_generated.sh  18  9
+  ./copy_generated.sh  19  0
+  ./copy_generated.sh  19  1
+  ./copy_generated.sh  19  2
+  ./copy_generated.sh  19  3
+  ./copy_generated.sh  19  4
+  ./copy_generated.sh  19  5
+  ./copy_generated.sh  19  6
+  ./copy_generated.sh  19  7
+  ./copy_generated.sh  19  8
+  ./copy_generated.sh  19  9
+  ./copy_generated.sh  20  0
+  ./copy_generated.sh  20  1
+  ./copy_generated.sh  20  2
+  ./copy_generated.sh  20  3
+  ./copy_generated.sh  20  4
+  ./copy_generated.sh  20  5
+  ./copy_generated.sh  20  6
+  ./copy_generated.sh  20  7
+  ./copy_generated.sh  20  8
+  ./copy_generated.sh  20  9
+  ./copy_generated.sh  21  0
+  ./copy_generated.sh  21  1
+  ./copy_generated.sh  21  2
+  ./copy_generated.sh  21  3
+  ./copy_generated.sh  21  4
+  ./copy_generated.sh  21  5
+  ./copy_generated.sh  21  6
+  ./copy_generated.sh  21  7
+  ./copy_generated.sh  21  8
+  ./copy_generated.sh  21  9
+  ./copy_generated.sh  22  0
+  ./copy_generated.sh  22  1
+  ./copy_generated.sh  22  2
+  ./copy_generated.sh  22  3
+  ./copy_generated.sh  22  4
+  ./copy_generated.sh  22  5
+  ./copy_generated.sh  22  6
+  ./copy_generated.sh  22  7
+  ./copy_generated.sh  22  8
+  ./copy_generated.sh  22  9
+  ./copy_generated.sh  23  0
+  ./copy_generated.sh  23  1
+  ./copy_generated.sh  23  2
+  ./copy_generated.sh  23  3
+  ./copy_generated.sh  23  4
+  ./copy_generated.sh  23  5
+  ./copy_generated.sh  23  6
+  ./copy_generated.sh  23  7
+  ./copy_generated.sh  23  8
+  ./copy_generated.sh  23  9
+  ./copy_generated.sh  24  0
+  ./copy_generated.sh  24  1
+  ./copy_generated.sh  24  2
+  ./copy_generated.sh  24  3
+  ./copy_generated.sh  24  4
+  ./copy_generated.sh  24  5
+  ./copy_generated.sh  24  6
+  ./copy_generated.sh  24  7
+  ./copy_generated.sh  24  8
+  ./copy_generated.sh  24  9
+  ./copy_generated.sh  25  0
+  ./copy_generated.sh  25  1
+  ./copy_generated.sh  25  2
+  ./copy_generated.sh  25  3
+  ./copy_generated.sh  25  4
+  ./copy_generated.sh  25  5
+  ./copy_generated.sh  25  6
+  ./copy_generated.sh  25  7
+  ./copy_generated.sh  25  8
+  ./copy_generated.sh  25  9
+  ./copy_generated.sh  26  0
+  ./copy_generated.sh  26  1
+  ./copy_generated.sh  26  2
+  ./copy_generated.sh  26  3
+  ./copy_generated.sh  26  4
+  ./copy_generated.sh  26  5
+  ./copy_generated.sh  26  6
+  ./copy_generated.sh  26  7
+  ./copy_generated.sh  26  8
+  ./copy_generated.sh  26  9
+  ./copy_generated.sh  27  0
+  ./copy_generated.sh  27  1
+  ./copy_generated.sh  27  2
+  ./copy_generated.sh  27  3
+  ./copy_generated.sh  27  4
+  ./copy_generated.sh  27  5
+  ./copy_generated.sh  27  6
+  ./copy_generated.sh  27  7
+  ./copy_generated.sh  27  8
+  ./copy_generated.sh  27  9
+  ./copy_generated.sh  28  0
+  ./copy_generated.sh  28  1
+  ./copy_generated.sh  28  2
+  ./copy_generated.sh  28  3
+  ./copy_generated.sh  28  4
+  ./copy_generated.sh  28  5
+  ./copy_generated.sh  28  6
+  ./copy_generated.sh  28  7
+  ./copy_generated.sh  28  8
+  ./copy_generated.sh  28  9
+  ./copy_generated.sh  29  0
+  ./copy_generated.sh  29  1
+  ./copy_generated.sh  29  2
+  ./copy_generated.sh  29  3
+  ./copy_generated.sh  29  4
+  ./copy_generated.sh  29  5
+  ./copy_generated.sh  29  6
+  ./copy_generated.sh  29  7
+  ./copy_generated.sh  29  8
+  ./copy_generated.sh  29  9
+  ./copy_generated.sh  30  0
+  ./copy_generated.sh  30  1
+  ./copy_generated.sh  30  2
+  ./copy_generated.sh  30  3
+  ./copy_generated.sh  30  4
+  ./copy_generated.sh  30  5
+  ./copy_generated.sh  30  6
+  ./copy_generated.sh  30  7
+  ./copy_generated.sh  30  8
+  ./copy_generated.sh  30  9
+  ./copy_generated.sh  31  0
+  ./copy_generated.sh  31  1
+  ./copy_generated.sh  31  2
+  ./copy_generated.sh  31  3
+  ./copy_generated.sh  31  4
+  ./copy_generated.sh  31  5
+  ./copy_generated.sh  31  6
+  ./copy_generated.sh  31  7
+  ./copy_generated.sh  31  8
+  ./copy_generated.sh  31  9
+  ./copy_generated.sh  32  0
+  ./copy_generated.sh  32  1
+  ./copy_generated.sh  32  2
+  ./copy_generated.sh  32  3
+  ./copy_generated.sh  32  4
+  ./copy_generated.sh  32  5
+  ./copy_generated.sh  32  6
+  ./copy_generated.sh  32  7
+  ./copy_generated.sh  32  8
+  ./copy_generated.sh  32  9
+  ./copy_generated.sh  33  0
+  ./copy_generated.sh  33  1
+  ./copy_generated.sh  33  2
+  ./copy_generated.sh  33  3
+  ./copy_generated.sh  33  4
+  ./copy_generated.sh  33  5
+  ./copy_generated.sh  33  6
+  ./copy_generated.sh  33  7
+  ./copy_generated.sh  33  8
+  ./copy_generated.sh  33  9
+  ./copy_generated.sh  34  0
+  ./copy_generated.sh  34  1
+  ./copy_generated.sh  34  2
+  ./copy_generated.sh  34  3
+  ./copy_generated.sh  34  4
+  ./copy_generated.sh  34  5
+  ./copy_generated.sh  34  6
+  ./copy_generated.sh  34  7
+  ./copy_generated.sh  34  8
+  ./copy_generated.sh  34  9
+  ./copy_generated.sh  35  0
+  ./copy_generated.sh  35  1
+  ./copy_generated.sh  35  2
+  ./copy_generated.sh  35  3
+  ./copy_generated.sh  35  4
+  ./copy_generated.sh  35  5
+  ./copy_generated.sh  35  6
+  ./copy_generated.sh  35  7
+  ./copy_generated.sh  35  8
+  ./copy_generated.sh  35  9
+  ./copy_generated.sh  36  0
+  ./copy_generated.sh  36  1
+  ./copy_generated.sh  36  2
+  ./copy_generated.sh  36  3
+  ./copy_generated.sh  36  4
+  ./copy_generated.sh  36  5
+  ./copy_generated.sh  36  6
+  ./copy_generated.sh  36  7
+  ./copy_generated.sh  36  8
+  ./copy_generated.sh  36  9
+  ./copy_generated.sh  37  0
+  ./copy_generated.sh  37  1
+  ./copy_generated.sh  37  2
+  ./copy_generated.sh  37  3
+  ./copy_generated.sh  37  4
+  ./copy_generated.sh  37  5
+  ./copy_generated.sh  37  6
+  ./copy_generated.sh  37  7
+  ./copy_generated.sh  37  8
+  ./copy_generated.sh  37  9
+  ./copy_generated.sh  38  0
+  ./copy_generated.sh  38  1
+  ./copy_generated.sh  38  2
+  ./copy_generated.sh  38  3
+  ./copy_generated.sh  38  4
+  ./copy_generated.sh  38  5
+  ./copy_generated.sh  38  6
+  ./copy_generated.sh  38  7
+  ./copy_generated.sh  38  8
+  ./copy_generated.sh  38  9
+  ./copy_generated.sh  39  0
+  ./copy_generated.sh  39  1
+  ./copy_generated.sh  39  2
+  ./copy_generated.sh  39  3
+  ./copy_generated.sh  39  4
+  ./copy_generated.sh  39  5
+  ./copy_generated.sh  39  6
+  ./copy_generated.sh  39  7
+  ./copy_generated.sh  39  8
+  ./copy_generated.sh  39  9
+  ./copy_generated.sh  40  0
+  ./copy_generated.sh  40  1
+  ./copy_generated.sh  40  2
+  ./copy_generated.sh  40  3
+  ./copy_generated.sh  40  4
+  ./copy_generated.sh  40  5
+  ./copy_generated.sh  40  6
+  ./copy_generated.sh  40  7
+  ./copy_generated.sh  40  8
+  ./copy_generated.sh  40  9
+  ./copy_generated.sh  41  0
+  ./copy_generated.sh  41  1
+  ./copy_generated.sh  41  2
+  ./copy_generated.sh  41  3
+  ./copy_generated.sh  41  4
+  ./copy_generated.sh  41  5
+  ./copy_generated.sh  41  6
+  ./copy_generated.sh  41  7
+  ./copy_generated.sh  41  8
+  ./copy_generated.sh  41  9
+  ./copy_generated.sh  42  0
+  ./copy_generated.sh  42  1
+  ./copy_generated.sh  42  2
+  ./copy_generated.sh  42  3
+  ./copy_generated.sh  42  4
+  ./copy_generated.sh  42  5
+  ./copy_generated.sh  42  6
+  ./copy_generated.sh  42  7
+  ./copy_generated.sh  42  8
+  ./copy_generated.sh  42  9
+  ./copy_generated.sh  43  0
+  ./copy_generated.sh  43  1
+  ./copy_generated.sh  43  2
+  ./copy_generated.sh  43  3
+  ./copy_generated.sh  43  4
+  ./copy_generated.sh  43  5
+  ./copy_generated.sh  43  6
+  ./copy_generated.sh  43  7
+  ./copy_generated.sh  43  8
+  ./copy_generated.sh  43  9
+  ./copy_generated.sh  44  0
+  ./copy_generated.sh  44  1
+  ./copy_generated.sh  44  2
+  ./copy_generated.sh  44  3
+  ./copy_generated.sh  44  4
+  ./copy_generated.sh  44  5
+  ./copy_generated.sh  44  6
+  ./copy_generated.sh  44  7
+  ./copy_generated.sh  44  8
+  ./copy_generated.sh  44  9
+  ./copy_generated.sh  45  0
+  ./copy_generated.sh  45  1
+  ./copy_generated.sh  45  2
+  ./copy_generated.sh  45  3
+  ./copy_generated.sh  45  4
+  ./copy_generated.sh  45  5
+  ./copy_generated.sh  45  6
+  ./copy_generated.sh  45  7
+  ./copy_generated.sh  45  8
+  ./copy_generated.sh  45  9
+  ./copy_generated.sh  46  0
+  ./copy_generated.sh  46  1
+  ./copy_generated.sh  46  2
+  ./copy_generated.sh  46  3
+  ./copy_generated.sh  46  4
+  ./copy_generated.sh  46  5
+  ./copy_generated.sh  46  6
+  ./copy_generated.sh  46  7
+  ./copy_generated.sh  46  8
+  ./copy_generated.sh  46  9
+  ./copy_generated.sh  47  0
+  ./copy_generated.sh  47  1
+  ./copy_generated.sh  47  2
+  ./copy_generated.sh  47  3
+  ./copy_generated.sh  47  4
+  ./copy_generated.sh  47  5
+  ./copy_generated.sh  47  6
+  ./copy_generated.sh  47  7
+  ./copy_generated.sh  47  8
+  ./copy_generated.sh  47  9
+  ./copy_generated.sh  48  0
+  ./copy_generated.sh  48  1
+  ./copy_generated.sh  48  2
+  ./copy_generated.sh  48  3
+  ./copy_generated.sh  48  4
+  ./copy_generated.sh  48  5
+  ./copy_generated.sh  48  6
+  ./copy_generated.sh  48  7
+  ./copy_generated.sh  48  8
+  ./copy_generated.sh  48  9
+  ./copy_generated.sh  49  0
+  ./copy_generated.sh  49  1
+  ./copy_generated.sh  49  2
+  ./copy_generated.sh  49  3
+  ./copy_generated.sh  49  4
+  ./copy_generated.sh  49  5
+  ./copy_generated.sh  49  6
+  ./copy_generated.sh  49  7
+  ./copy_generated.sh  49  8
+  ./copy_generated.sh  49  9
+  ./copy_generated.sh  50  0
+  ./copy_generated.sh  50  1
+  ./copy_generated.sh  50  2
+  ./copy_generated.sh  50  3
+  ./copy_generated.sh  50  4
+  ./copy_generated.sh  50  5
+  ./copy_generated.sh  50  6
+  ./copy_generated.sh  50  7
+  ./copy_generated.sh  50  8
+  ./copy_generated.sh  50  9
+  ./copy_generated.sh  51  0
+  ./copy_generated.sh  51  1
+  ./copy_generated.sh  51  2
+  ./copy_generated.sh  51  3
+  ./copy_generated.sh  51  4
+  ./copy_generated.sh  51  5
+  ./copy_generated.sh  51  6
+  ./copy_generated.sh  51  7
+  ./copy_generated.sh  51  8
+  ./copy_generated.sh  51  9
+  ./copy_generated.sh  52  0
+  ./copy_generated.sh  52  1
+  ./copy_generated.sh  52  2
+  ./copy_generated.sh  52  3
+  ./copy_generated.sh  52  4
+  ./copy_generated.sh  52  5
+  ./copy_generated.sh  52  6
+  ./copy_generated.sh  52  7
+  ./copy_generated.sh  52  8
+  ./copy_generated.sh  52  9
+  ./copy_generated.sh  53  0
+  ./copy_generated.sh  53  1
+  ./copy_generated.sh  53  2
+  ./copy_generated.sh  53  3
+  ./copy_generated.sh  53  4
+  ./copy_generated.sh  53  5
+  ./copy_generated.sh  53  6
+  ./copy_generated.sh  53  7
+  ./copy_generated.sh  53  8
+  ./copy_generated.sh  53  9
+  ./copy_generated.sh  54  0
+  ./copy_generated.sh  54  1
+  ./copy_generated.sh  54  2
+  ./copy_generated.sh  54  3
+  ./copy_generated.sh  54  4
+  ./copy_generated.sh  54  5
+  ./copy_generated.sh  54  6
+  ./copy_generated.sh  54  7
+  ./copy_generated.sh  54  8
+  ./copy_generated.sh  54  9
+  ./copy_generated.sh  55  0
+  ./copy_generated.sh  55  1
+  ./copy_generated.sh  55  2
+  ./copy_generated.sh  55  3
+  ./copy_generated.sh  55  4
+  ./copy_generated.sh  55  5
+  ./copy_generated.sh  55  6
+  ./copy_generated.sh  55  7
+  ./copy_generated.sh  55  8
+  ./copy_generated.sh  55  9
+  ./copy_generated.sh  56  0
+  ./copy_generated.sh  56  1
+  ./copy_generated.sh  56  2
+  ./copy_generated.sh  56  3
+  ./copy_generated.sh  56  4
+  ./copy_generated.sh  56  5
+  ./copy_generated.sh  56  6
+  ./copy_generated.sh  56  7
+  ./copy_generated.sh  56  8
+  ./copy_generated.sh  56  9
+  ./copy_generated.sh  57  0
+  ./copy_generated.sh  57  1
+  ./copy_generated.sh  57  2
+  ./copy_generated.sh  57  3
+  ./copy_generated.sh  57  4
+  ./copy_generated.sh  57  5
+  ./copy_generated.sh  57  6
+  ./copy_generated.sh  57  7
+  ./copy_generated.sh  57  8
+  ./copy_generated.sh  57  9
+  ./copy_generated.sh  58  0
+  ./copy_generated.sh  58  1
+  ./copy_generated.sh  58  2
+  ./copy_generated.sh  58  3
+  ./copy_generated.sh  58  4
+  ./copy_generated.sh  58  5
+  ./copy_generated.sh  58  6
+  ./copy_generated.sh  58  7
+  ./copy_generated.sh  58  8
+  ./copy_generated.sh  58  9
+  ./copy_generated.sh  59  0
+  ./copy_generated.sh  59  1
+  ./copy_generated.sh  59  2
+  ./copy_generated.sh  59  3
+  ./copy_generated.sh  59  4
+  ./copy_generated.sh  59  5
+  ./copy_generated.sh  59  6
+  ./copy_generated.sh  59  7
+  ./copy_generated.sh  59  8
+  ./copy_generated.sh  59  9
+  ./copy_generated.sh  60  0
+  ./copy_generated.sh  60  1
+  ./copy_generated.sh  60  2
+  ./copy_generated.sh  60  3
+  ./copy_generated.sh  60  4
+  ./copy_generated.sh  60  5
+  ./copy_generated.sh  60  6
+  ./copy_generated.sh  60  7
+  ./copy_generated.sh  60  8
+  ./copy_generated.sh  60  9
+  ./copy_generated.sh  61  0
+  ./copy_generated.sh  61  1
+  ./copy_generated.sh  61  2
+  ./copy_generated.sh  61  3
+  ./copy_generated.sh  61  4
+  ./copy_generated.sh  61  5
+  ./copy_generated.sh  61  6
+  ./copy_generated.sh  61  7
+  ./copy_generated.sh  61  8
+  ./copy_generated.sh  61  9
+  ./copy_generated.sh  62  0
+  ./copy_generated.sh  62  1
+  ./copy_generated.sh  62  2
+  ./copy_generated.sh  62  3
+  ./copy_generated.sh  62  4
+  ./copy_generated.sh  62  5
+  ./copy_generated.sh  62  6
+  ./copy_generated.sh  62  7
+  ./copy_generated.sh  62  8
+  ./copy_generated.sh  62  9
+  ./copy_generated.sh  63  0
+  ./copy_generated.sh  63  1
+  ./copy_generated.sh  63  2
+  ./copy_generated.sh  63  3
+  ./copy_generated.sh  63  4
+  ./copy_generated.sh  63  5
+  ./copy_generated.sh  63  6
+  ./copy_generated.sh  63  7
+  ./copy_generated.sh  63  8
+  ./copy_generated.sh  63  9
+  ./copy_generated.sh  64  0
+  ./copy_generated.sh  64  1
+  ./copy_generated.sh  64  2
+  ./copy_generated.sh  64  3
+  ./copy_generated.sh  64  4
+  ./copy_generated.sh  64  5
+  ./copy_generated.sh  64  6
+  ./copy_generated.sh  64  7
+  ./copy_generated.sh  64  8
+  ./copy_generated.sh  64  9
+  ./copy_generated.sh  65  0
+  ./copy_generated.sh  65  1
+  ./copy_generated.sh  65  2
+  ./copy_generated.sh  65  3
+  ./copy_generated.sh  65  4
+  ./copy_generated.sh  65  5
+  ./copy_generated.sh  65  6
+  ./copy_generated.sh  65  7
+  ./copy_generated.sh  65  8
+  ./copy_generated.sh  65  9
+  ./copy_generated.sh  66  0
+  ./copy_generated.sh  66  1
+  ./copy_generated.sh  66  2
+  ./copy_generated.sh  66  3
+  ./copy_generated.sh  66  4
+  ./copy_generated.sh  66  5
+  ./copy_generated.sh  66  6
+  ./copy_generated.sh  66  7
+  ./copy_generated.sh  66  8
+  ./copy_generated.sh  66  9
+  ./copy_generated.sh  67  0
+  ./copy_generated.sh  67  1
+  ./copy_generated.sh  67  2
+  ./copy_generated.sh  67  3
+  ./copy_generated.sh  67  4
+  ./copy_generated.sh  67  5
+  ./copy_generated.sh  67  6
+  ./copy_generated.sh  67  7
+  ./copy_generated.sh  67  8
+  ./copy_generated.sh  67  9
+  ./copy_generated.sh  68  0
+  ./copy_generated.sh  68  1
+  ./copy_generated.sh  68  2
+  ./copy_generated.sh  68  3
+  ./copy_generated.sh  68  4
+  ./copy_generated.sh  68  5
+  ./copy_generated.sh  68  6
+  ./copy_generated.sh  68  7
+  ./copy_generated.sh  68  8
+  ./copy_generated.sh  68  9
+  ./copy_generated.sh  69  0
+  ./copy_generated.sh  69  1
+  ./copy_generated.sh  69  2
+  ./copy_generated.sh  69  3
+  ./copy_generated.sh  69  4
+  ./copy_generated.sh  69  5
+  ./copy_generated.sh  69  6
+  ./copy_generated.sh  69  7
+  ./copy_generated.sh  69  8
+  ./copy_generated.sh  69  9
+  ./copy_generated.sh  70  0
+  ./copy_generated.sh  70  1
+  ./copy_generated.sh  70  2
+  ./copy_generated.sh  70  3
+  ./copy_generated.sh  70  4
+  ./copy_generated.sh  70  5
+  ./copy_generated.sh  70  6
+  ./copy_generated.sh  70  7
+  ./copy_generated.sh  70  8
+  ./copy_generated.sh  70  9
+  ./copy_generated.sh  71  0
+  ./copy_generated.sh  71  1
+  ./copy_generated.sh  71  2
+  ./copy_generated.sh  71  3
+  ./copy_generated.sh  71  4
+  ./copy_generated.sh  71  5
+  ./copy_generated.sh  71  6
+  ./copy_generated.sh  71  7
+  ./copy_generated.sh  71  8
+  ./copy_generated.sh  71  9
+  ./copy_generated.sh  72  0
+  ./copy_generated.sh  72  1
+  ./copy_generated.sh  72  2
+  ./copy_generated.sh  72  3
+  ./copy_generated.sh  72  4
+  ./copy_generated.sh  72  5
+  ./copy_generated.sh  72  6
+  ./copy_generated.sh  72  7
+  ./copy_generated.sh  72  8
+  ./copy_generated.sh  72  9
+  ./copy_generated.sh  73  0
+  ./copy_generated.sh  73  1
+  ./copy_generated.sh  73  2
+  ./copy_generated.sh  73  3
+  ./copy_generated.sh  73  4
+  ./copy_generated.sh  73  5
+  ./copy_generated.sh  73  6
+  ./copy_generated.sh  73  7
+  ./copy_generated.sh  73  8
+  ./copy_generated.sh  73  9
+  ./copy_generated.sh  74  0
+  ./copy_generated.sh  74  1
+  ./copy_generated.sh  74  2
+  ./copy_generated.sh  74  3
+  ./copy_generated.sh  74  4
+  ./copy_generated.sh  74  5
+  ./copy_generated.sh  74  6
+  ./copy_generated.sh  74  7
+  ./copy_generated.sh  74  8
+  ./copy_generated.sh  74  9
+  ./copy_generated.sh  75  0
+  ./copy_generated.sh  75  1
+  ./copy_generated.sh  75  2
+  ./copy_generated.sh  75  3
+  ./copy_generated.sh  75  4
+  ./copy_generated.sh  75  5
+  ./copy_generated.sh  75  6
+  ./copy_generated.sh  75  7
+  ./copy_generated.sh  75  8
+  ./copy_generated.sh  75  9
+  ./copy_generated.sh  76  0
+  ./copy_generated.sh  76  1
+  ./copy_generated.sh  76  2
+  ./copy_generated.sh  76  3
+  ./copy_generated.sh  76  4
+  ./copy_generated.sh  76  5
+  ./copy_generated.sh  76  6
+  ./copy_generated.sh  76  7
+  ./copy_generated.sh  76  8
+  ./copy_generated.sh  76  9
+  ./copy_generated.sh  77  0
+  ./copy_generated.sh  77  1
+  ./copy_generated.sh  77  2
+  ./copy_generated.sh  77  3
+  ./copy_generated.sh  77  4
+  ./copy_generated.sh  77  5
+  ./copy_generated.sh  77  6
+  ./copy_generated.sh  77  7
+  ./copy_generated.sh  77  8
+  ./copy_generated.sh  77  9
+  ./copy_generated.sh  78  0
+  ./copy_generated.sh  78  1
+  ./copy_generated.sh  78  2
+  ./copy_generated.sh  78  3
+  ./copy_generated.sh  78  4
+  ./copy_generated.sh  78  5
+  ./copy_generated.sh  78  6
+  ./copy_generated.sh  78  7
+  ./copy_generated.sh  78  8
+  ./copy_generated.sh  78  9
+  ./copy_generated.sh  79  0
+  ./copy_generated.sh  79  1
+  ./copy_generated.sh  79  2
+  ./copy_generated.sh  79  3
+  ./copy_generated.sh  79  4
+  ./copy_generated.sh  79  5
+  ./copy_generated.sh  79  6
+  ./copy_generated.sh  79  7
+  ./copy_generated.sh  79  8
+  ./copy_generated.sh  79  9
+  ./copy_generated.sh  80  0
+  ./copy_generated.sh  80  1
+  ./copy_generated.sh  80  2
+  ./copy_generated.sh  80  3
+  ./copy_generated.sh  80  4
+  ./copy_generated.sh  80  5
+  ./copy_generated.sh  80  6
+  ./copy_generated.sh  80  7
+  ./copy_generated.sh  80  8
+  ./copy_generated.sh  80  9
+  ./copy_generated.sh  81  0
+  ./copy_generated.sh  81  1
+  ./copy_generated.sh  81  2
+  ./copy_generated.sh  81  3
+  ./copy_generated.sh  81  4
+  ./copy_generated.sh  81  5
+  ./copy_generated.sh  81  6
+  ./copy_generated.sh  81  7
+  ./copy_generated.sh  81  8
+  ./copy_generated.sh  81  9
+  ./copy_generated.sh  82  0
+  ./copy_generated.sh  82  1
+  ./copy_generated.sh  82  2
+  ./copy_generated.sh  82  3
+  ./copy_generated.sh  82  4
+  ./copy_generated.sh  82  5
+  ./copy_generated.sh  82  6
+  ./copy_generated.sh  82  7
+  ./copy_generated.sh  82  8
+  ./copy_generated.sh  82  9
+  ./copy_generated.sh  83  0
+  ./copy_generated.sh  83  1
+  ./copy_generated.sh  83  2
+  ./copy_generated.sh  83  3
+  ./copy_generated.sh  83  4
+  ./copy_generated.sh  83  5
+  ./copy_generated.sh  83  6
+  ./copy_generated.sh  83  7
+  ./copy_generated.sh  83  8
+  ./copy_generated.sh  83  9
+  ./copy_generated.sh  84  0
+  ./copy_generated.sh  84  1
+  ./copy_generated.sh  84  2
+  ./copy_generated.sh  84  3
+  ./copy_generated.sh  84  4
+  ./copy_generated.sh  84  5
+  ./copy_generated.sh  84  6
+  ./copy_generated.sh  84  7
+  ./copy_generated.sh  84  8
+  ./copy_generated.sh  84  9
+  ./copy_generated.sh  85  0
+  ./copy_generated.sh  85  1
+  ./copy_generated.sh  85  2
+  ./copy_generated.sh  85  3
+  ./copy_generated.sh  85  4
+  ./copy_generated.sh  85  5
+  ./copy_generated.sh  85  6
+  ./copy_generated.sh  85  7
+  ./copy_generated.sh  85  8
+  ./copy_generated.sh  85  9
+  ./copy_generated.sh  86  0
+  ./copy_generated.sh  86  1
+  ./copy_generated.sh  86  2
+  ./copy_generated.sh  86  3
+  ./copy_generated.sh  86  4
+  ./copy_generated.sh  86  5
+  ./copy_generated.sh  86  6
+  ./copy_generated.sh  86  7
+  ./copy_generated.sh  86  8
+  ./copy_generated.sh  86  9
+  ./copy_generated.sh  87  0
+  ./copy_generated.sh  87  1
+  ./copy_generated.sh  87  2
+  ./copy_generated.sh  87  3
+  ./copy_generated.sh  87  4
+  ./copy_generated.sh  87  5
+  ./copy_generated.sh  87  6
+  ./copy_generated.sh  87  7
+  ./copy_generated.sh  87  8
+  ./copy_generated.sh  87  9
+  ./copy_generated.sh  88  0
+  ./copy_generated.sh  88  1
+  ./copy_generated.sh  88  2
+  ./copy_generated.sh  88  3
+  ./copy_generated.sh  88  4
+  ./copy_generated.sh  88  5
+  ./copy_generated.sh  88  6
+  ./copy_generated.sh  88  7
+  ./copy_generated.sh  88  8
+  ./copy_generated.sh  88  9
+  ./copy_generated.sh  89  0
+  ./copy_generated.sh  89  1
+  ./copy_generated.sh  89  2
+  ./copy_generated.sh  89  3
+  ./copy_generated.sh  89  4
+  ./copy_generated.sh  89  5
+  ./copy_generated.sh  89  6
+  ./copy_generated.sh  89  7
+  ./copy_generated.sh  89  8
+  ./copy_generated.sh  89  9
+  ./copy_generated.sh  90  0
+  ./copy_generated.sh  90  1
+  ./copy_generated.sh  90  2
+  ./copy_generated.sh  90  3
+  ./copy_generated.sh  90  4
+  ./copy_generated.sh  90  5
+  ./copy_generated.sh  90  6
+  ./copy_generated.sh  90  7
+  ./copy_generated.sh  90  8
+  ./copy_generated.sh  90  9
+  ./copy_generated.sh  91  0
+  ./copy_generated.sh  91  1
+  ./copy_generated.sh  91  2
+  ./copy_generated.sh  91  3
+  ./copy_generated.sh  91  4
+  ./copy_generated.sh  91  5
+  ./copy_generated.sh  91  6
+  ./copy_generated.sh  91  7
+  ./copy_generated.sh  91  8
+  ./copy_generated.sh  91  9
+  ./copy_generated.sh  92  0
+  ./copy_generated.sh  92  1
+  ./copy_generated.sh  92  2
+  ./copy_generated.sh  92  3
+  ./copy_generated.sh  92  4
+  ./copy_generated.sh  92  5
+  ./copy_generated.sh  92  6
+  ./copy_generated.sh  92  7
+  ./copy_generated.sh  92  8
+  ./copy_generated.sh  92  9
+  ./copy_generated.sh  93  0
+  ./copy_generated.sh  93  1
+  ./copy_generated.sh  93  2
+  ./copy_generated.sh  93  3
+  ./copy_generated.sh  93  4
+  ./copy_generated.sh  93  5
+  ./copy_generated.sh  93  6
+  ./copy_generated.sh  93  7
+  ./copy_generated.sh  93  8
+  ./copy_generated.sh  93  9
+  ./copy_generated.sh  94  0
+  ./copy_generated.sh  94  1
+  ./copy_generated.sh  94  2
+  ./copy_generated.sh  94  3
+  ./copy_generated.sh  94  4
+  ./copy_generated.sh  94  5
+  ./copy_generated.sh  94  6
+  ./copy_generated.sh  94  7
+  ./copy_generated.sh  94  8
+  ./copy_generated.sh  94  9
+  ./copy_generated.sh  95  0
+  ./copy_generated.sh  95  1
+  ./copy_generated.sh  95  2
+  ./copy_generated.sh  95  3
+  ./copy_generated.sh  95  4
+  ./copy_generated.sh  95  5
+  ./copy_generated.sh  95  6
+  ./copy_generated.sh  95  7
+  ./copy_generated.sh  95  8
+  ./copy_generated.sh  95  9
+  ./copy_generated.sh  96  0
+  ./copy_generated.sh  96  1
+  ./copy_generated.sh  96  2
+  ./copy_generated.sh  96  3
+  ./copy_generated.sh  96  4
+  ./copy_generated.sh  96  5
+  ./copy_generated.sh  96  6
+  ./copy_generated.sh  96  7
+  ./copy_generated.sh  96  8
+  ./copy_generated.sh  96  9
+  ./copy_generated.sh  97  0
+  ./copy_generated.sh  97  1
+  ./copy_generated.sh  97  2
+  ./copy_generated.sh  97  3
+  ./copy_generated.sh  97  4
+  ./copy_generated.sh  97  5
+  ./copy_generated.sh  97  6
+  ./copy_generated.sh  97  7
+  ./copy_generated.sh  97  8
+  ./copy_generated.sh  97  9
+  ./copy_generated.sh  98  0
+  ./copy_generated.sh  98  1
+  ./copy_generated.sh  98  2
+  ./copy_generated.sh  98  3
+  ./copy_generated.sh  98  4
+  ./copy_generated.sh  98  5
+  ./copy_generated.sh  98  6
+  ./copy_generated.sh  98  7
+  ./copy_generated.sh  98  8
+  ./copy_generated.sh  98  9
+  ./copy_generated.sh  99  0
+  ./copy_generated.sh  99  1
+  ./copy_generated.sh  99  2
+  ./copy_generated.sh  99  3
+  ./copy_generated.sh  99  4
+  ./copy_generated.sh  99  5
+  ./copy_generated.sh  99  6
+  ./copy_generated.sh  99  7
+  ./copy_generated.sh  99  8
+  ./copy_generated.sh  99  9
+  ./copy_generated.sh  100  0
+  ./copy_generated.sh  100  1
+  ./copy_generated.sh  100  2
+  ./copy_generated.sh  100  3
+  ./copy_generated.sh  100  4
+  ./copy_generated.sh  100  5
+  ./copy_generated.sh  100  6
+  ./copy_generated.sh  100  7
+  ./copy_generated.sh  100  8
+  ./copy_generated.sh  100  9
+  ./copy_generated.sh  101  0
+  ./copy_generated.sh  101  1
+  ./copy_generated.sh  101  2
+  ./copy_generated.sh  101  3
+  ./copy_generated.sh  101  4
+  ./copy_generated.sh  101  5
+  ./copy_generated.sh  101  6
+  ./copy_generated.sh  101  7
+  ./copy_generated.sh  101  8
+  ./copy_generated.sh  101  9
+  ./copy_generated.sh  102  0
+  ./copy_generated.sh  102  1
+  ./copy_generated.sh  102  2
+  ./copy_generated.sh  102  3
+  ./copy_generated.sh  102  4
+  ./copy_generated.sh  102  5
+  ./copy_generated.sh  102  6
+  ./copy_generated.sh  102  7
+  ./copy_generated.sh  102  8
+  ./copy_generated.sh  102  9
+  ./copy_generated.sh  103  0
+  ./copy_generated.sh  103  1
+  ./copy_generated.sh  103  2
+  ./copy_generated.sh  103  3
+  ./copy_generated.sh  103  4
+  ./copy_generated.sh  103  5
+  ./copy_generated.sh  103  6
+  ./copy_generated.sh  103  7
+  ./copy_generated.sh  103  8
+  ./copy_generated.sh  103  9
+  ./copy_generated.sh  104  0
+  ./copy_generated.sh  104  1
+  ./copy_generated.sh  104  2
+  ./copy_generated.sh  104  3
+  ./copy_generated.sh  104  4
+  ./copy_generated.sh  104  5
+  ./copy_generated.sh  104  6
+  ./copy_generated.sh  104  7
+  ./copy_generated.sh  104  8
+  ./copy_generated.sh  104  9
+  ./copy_generated.sh  105  0
+  ./copy_generated.sh  105  1
+  ./copy_generated.sh  105  2
+  ./copy_generated.sh  105  3
+  ./copy_generated.sh  105  4
+  ./copy_generated.sh  105  5
+  ./copy_generated.sh  105  6
+  ./copy_generated.sh  105  7
+  ./copy_generated.sh  105  8
+  ./copy_generated.sh  105  9
+  ./copy_generated.sh  106  0
+  ./copy_generated.sh  106  1
+  ./copy_generated.sh  106  2
+  ./copy_generated.sh  106  3
+  ./copy_generated.sh  106  4
+  ./copy_generated.sh  106  5
+  ./copy_generated.sh  106  6
+  ./copy_generated.sh  106  7
+  ./copy_generated.sh  106  8
+  ./copy_generated.sh  106  9
+  ./copy_generated.sh  107  0
+  ./copy_generated.sh  107  1
+  ./copy_generated.sh  107  2
+  ./copy_generated.sh  107  3
+  ./copy_generated.sh  107  4
+  ./copy_generated.sh  107  5
+  ./copy_generated.sh  107  6
+  ./copy_generated.sh  107  7
+  ./copy_generated.sh  107  8
+  ./copy_generated.sh  107  9
+  ./copy_generated.sh  108  0
+  ./copy_generated.sh  108  1
+  ./copy_generated.sh  108  2
+  ./copy_generated.sh  108  3
+  ./copy_generated.sh  108  4
+  ./copy_generated.sh  108  5
+  ./copy_generated.sh  108  6
+  ./copy_generated.sh  108  7
+  ./copy_generated.sh  108  8
+  ./copy_generated.sh  108  9
+  ./copy_generated.sh  109  0
+  ./copy_generated.sh  109  1
+  ./copy_generated.sh  109  2
+  ./copy_generated.sh  109  3
+  ./copy_generated.sh  109  4
+  ./copy_generated.sh  109  5
+  ./copy_generated.sh  109  6
+  ./copy_generated.sh  109  7
+  ./copy_generated.sh  109  8
+  ./copy_generated.sh  109  9
+  ./copy_generated.sh  110  0
+  ./copy_generated.sh  110  1
+  ./copy_generated.sh  110  2
+  ./copy_generated.sh  110  3
+  ./copy_generated.sh  110  4
+  ./copy_generated.sh  110  5
+  ./copy_generated.sh  110  6
+  ./copy_generated.sh  110  7
+  ./copy_generated.sh  110  8
+  ./copy_generated.sh  110  9
+  ./copy_generated.sh  111  0
+  ./copy_generated.sh  111  1
+  ./copy_generated.sh  111  2
+  ./copy_generated.sh  111  3
+  ./copy_generated.sh  111  4
+  ./copy_generated.sh  111  5
+  ./copy_generated.sh  111  6
+  ./copy_generated.sh  111  7
+  ./copy_generated.sh  111  8
+  ./copy_generated.sh  111  9
+  ./copy_generated.sh  112  0
+  ./copy_generated.sh  112  1
+  ./copy_generated.sh  112  2
+  ./copy_generated.sh  112  3
+  ./copy_generated.sh  112  4
+  ./copy_generated.sh  112  5
+  ./copy_generated.sh  112  6
+  ./copy_generated.sh  112  7
+  ./copy_generated.sh  112  8
+  ./copy_generated.sh  112  9
+#+end_src
+
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./copy_original.sh
+  mkdir -pv DATA_NEW
+  FILE="$(ls DATA/${1}/instance/original.*)"
+  TYPE="$(echo "${FILE}" | cut -d '.' '-f2')"
+  HASH="$(crc32 "${FILE}" | cut -d ' ' -f1)"
+  cp -vf "${FILE}" "DATA_NEW/${HASH}.${TYPE}"
+  cp -vf "DATA/${1}/instance/prompt.txt" "DATA_NEW/${HASH}.txt"
+#+end_src
+
+#+RESULTS:
+: 'DATA/0/instance/original.jpg' -> 'DATA_NEW/0c296a41e926051af8786bf0fb7dadccfb1fda9e7ae55bf5436b5380c46e861f2bd80c046f3cae44dc325f55b6d1072eaab45a674ce2460b27d5f11949bf001d.jpg'
+
+#+begin_src sh :shebang #!/bin/sh :results output
+  ./copy_original.sh  0
+  ./copy_original.sh  1
+  ./copy_original.sh  2
+  ./copy_original.sh  3
+  ./copy_original.sh  4
+  ./copy_original.sh  5
+  ./copy_original.sh  6
+  ./copy_original.sh  7
+  ./copy_original.sh  8
+  ./copy_original.sh  9
+  ./copy_original.sh  10
+  ./copy_original.sh  11
+  ./copy_original.sh  12
+  ./copy_original.sh  13
+  ./copy_original.sh  14
+  ./copy_original.sh  15
+  ./copy_original.sh  16
+  ./copy_original.sh  17
+  ./copy_original.sh  18
+  ./copy_original.sh  19
+  ./copy_original.sh  20
+  ./copy_original.sh  21
+  ./copy_original.sh  22
+  ./copy_original.sh  23
+  ./copy_original.sh  24
+  ./copy_original.sh  25
+  ./copy_original.sh  26
+  ./copy_original.sh  27
+  ./copy_original.sh  28
+  ./copy_original.sh  29
+  ./copy_original.sh  30
+  ./copy_original.sh  31
+  ./copy_original.sh  32
+  ./copy_original.sh  33
+  ./copy_original.sh  34
+  ./copy_original.sh  35
+  ./copy_original.sh  36
+  ./copy_original.sh  37
+  ./copy_original.sh  38
+  ./copy_original.sh  39
+  ./copy_original.sh  40
+  ./copy_original.sh  41
+  ./copy_original.sh  42
+  ./copy_original.sh  43
+  ./copy_original.sh  44
+  ./copy_original.sh  45
+  ./copy_original.sh  46
+  ./copy_original.sh  47
+  ./copy_original.sh  48
+  ./copy_original.sh  49
+  ./copy_original.sh  50
+  ./copy_original.sh  51
+  ./copy_original.sh  52
+  ./copy_original.sh  53
+  ./copy_original.sh  54
+  ./copy_original.sh  55
+  ./copy_original.sh  56
+  ./copy_original.sh  57
+  ./copy_original.sh  58
+  ./copy_original.sh  59
+  ./copy_original.sh  60
+  ./copy_original.sh  61
+  ./copy_original.sh  62
+  ./copy_original.sh  63
+  ./copy_original.sh  64
+  ./copy_original.sh  65
+  ./copy_original.sh  66
+  ./copy_original.sh  67
+  ./copy_original.sh  68
+  ./copy_original.sh  69
+  ./copy_original.sh  70
+  ./copy_original.sh  71
+  ./copy_original.sh  72
+  ./copy_original.sh  73
+  ./copy_original.sh  74
+  ./copy_original.sh  75
+  ./copy_original.sh  76
+  ./copy_original.sh  77
+  ./copy_original.sh  78
+  ./copy_original.sh  79
+  ./copy_original.sh  80
+  ./copy_original.sh  81
+  ./copy_original.sh  82
+  ./copy_original.sh  83
+  ./copy_original.sh  84
+  ./copy_original.sh  85
+  ./copy_original.sh  86
+  ./copy_original.sh  87
+  ./copy_original.sh  88
+  ./copy_original.sh  89
+  ./copy_original.sh  90
+  ./copy_original.sh  91
+  ./copy_original.sh  92
+  ./copy_original.sh  93
+  ./copy_original.sh  94
+  ./copy_original.sh  95
+  ./copy_original.sh  96
+  ./copy_original.sh  97
+  ./copy_original.sh  98
+  ./copy_original.sh  99
+  ./copy_original.sh  100
+  ./copy_original.sh  101
+  ./copy_original.sh  102
+  ./copy_original.sh  103
+  ./copy_original.sh  104
+  ./copy_original.sh  105
+  ./copy_original.sh  106
+  ./copy_original.sh  107
+  ./copy_original.sh  108
+  ./copy_original.sh  109
+  ./copy_original.sh  110
+  ./copy_original.sh  111
+  ./copy_original.sh  112
+#+end_src
+
+#+RESULTS:
+#+begin_example
+mkdir: created directory 'DATA_NEW'
+'DATA/0/instance/original.jpg' -> 'DATA_NEW/34e525db.jpg'
+'DATA/0/instance/prompt.txt' -> 'DATA_NEW/34e525db.txt'
+'DATA/1/instance/original.jpg' -> 'DATA_NEW/92cb0f91.jpg'
+'DATA/1/instance/prompt.txt' -> 'DATA_NEW/92cb0f91.txt'
+'DATA/2/instance/original.jpg' -> 'DATA_NEW/5ed81d1a.jpg'
+'DATA/2/instance/prompt.txt' -> 'DATA_NEW/5ed81d1a.txt'
+'DATA/3/instance/original.png' -> 'DATA_NEW/8ba360b0.png'
+'DATA/3/instance/prompt.txt' -> 'DATA_NEW/8ba360b0.txt'
+'DATA/4/instance/original.jpg' -> 'DATA_NEW/1c79b4f8.jpg'
+'DATA/4/instance/prompt.txt' -> 'DATA_NEW/1c79b4f8.txt'
+'DATA/5/instance/original.jpg' -> 'DATA_NEW/3e011f52.jpg'
+'DATA/5/instance/prompt.txt' -> 'DATA_NEW/3e011f52.txt'
+'DATA/6/instance/original.jpg' -> 'DATA_NEW/5ea68abd.jpg'
+'DATA/6/instance/prompt.txt' -> 'DATA_NEW/5ea68abd.txt'
+'DATA/7/instance/original.jpg' -> 'DATA_NEW/c6d01b8f.jpg'
+'DATA/7/instance/prompt.txt' -> 'DATA_NEW/c6d01b8f.txt'
+'DATA/8/instance/original.jpg' -> 'DATA_NEW/b7a03bfe.jpg'
+'DATA/8/instance/prompt.txt' -> 'DATA_NEW/b7a03bfe.txt'
+'DATA/9/instance/original.jpg' -> 'DATA_NEW/de44b23b.jpg'
+'DATA/9/instance/prompt.txt' -> 'DATA_NEW/de44b23b.txt'
+'DATA/10/instance/original.jpg' -> 'DATA_NEW/9542fbfd.jpg'
+'DATA/10/instance/prompt.txt' -> 'DATA_NEW/9542fbfd.txt'
+'DATA/11/instance/original.jpg' -> 'DATA_NEW/6d896180.jpg'
+'DATA/11/instance/prompt.txt' -> 'DATA_NEW/6d896180.txt'
+'DATA/12/instance/original.jpg' -> 'DATA_NEW/460615a6.jpg'
+'DATA/12/instance/prompt.txt' -> 'DATA_NEW/460615a6.txt'
+'DATA/13/instance/original.jpg' -> 'DATA_NEW/60b5396c.jpg'
+'DATA/13/instance/prompt.txt' -> 'DATA_NEW/60b5396c.txt'
+'DATA/14/instance/original.jpg' -> 'DATA_NEW/232abded.jpg'
+'DATA/14/instance/prompt.txt' -> 'DATA_NEW/232abded.txt'
+'DATA/15/instance/original.jpg' -> 'DATA_NEW/6001fa6a.jpg'
+'DATA/15/instance/prompt.txt' -> 'DATA_NEW/6001fa6a.txt'
+'DATA/16/instance/original.jpg' -> 'DATA_NEW/b8fab782.jpg'
+'DATA/16/instance/prompt.txt' -> 'DATA_NEW/b8fab782.txt'
+'DATA/17/instance/original.jpg' -> 'DATA_NEW/2ba927cb.jpg'
+'DATA/17/instance/prompt.txt' -> 'DATA_NEW/2ba927cb.txt'
+'DATA/18/instance/original.jpg' -> 'DATA_NEW/b2c437a8.jpg'
+'DATA/18/instance/prompt.txt' -> 'DATA_NEW/b2c437a8.txt'
+'DATA/19/instance/original.jpg' -> 'DATA_NEW/ec712690.jpg'
+'DATA/19/instance/prompt.txt' -> 'DATA_NEW/ec712690.txt'
+'DATA/20/instance/original.jpg' -> 'DATA_NEW/e5d7d1cf.jpg'
+'DATA/20/instance/prompt.txt' -> 'DATA_NEW/e5d7d1cf.txt'
+'DATA/21/instance/original.jpg' -> 'DATA_NEW/30d63cb1.jpg'
+'DATA/21/instance/prompt.txt' -> 'DATA_NEW/30d63cb1.txt'
+'DATA/22/instance/original.jpg' -> 'DATA_NEW/8952fb6f.jpg'
+'DATA/22/instance/prompt.txt' -> 'DATA_NEW/8952fb6f.txt'
+'DATA/23/instance/original.jpg' -> 'DATA_NEW/b69f2279.jpg'
+'DATA/23/instance/prompt.txt' -> 'DATA_NEW/b69f2279.txt'
+'DATA/24/instance/original.jpg' -> 'DATA_NEW/8cf5651e.jpg'
+'DATA/24/instance/prompt.txt' -> 'DATA_NEW/8cf5651e.txt'
+'DATA/25/instance/original.jpg' -> 'DATA_NEW/cc17249c.jpg'
+'DATA/25/instance/prompt.txt' -> 'DATA_NEW/cc17249c.txt'
+'DATA/26/instance/original.jpg' -> 'DATA_NEW/36a7d63e.jpg'
+'DATA/26/instance/prompt.txt' -> 'DATA_NEW/36a7d63e.txt'
+'DATA/27/instance/original.jpg' -> 'DATA_NEW/fac22a3f.jpg'
+'DATA/27/instance/prompt.txt' -> 'DATA_NEW/fac22a3f.txt'
+'DATA/28/instance/original.jpg' -> 'DATA_NEW/93665a5c.jpg'
+'DATA/28/instance/prompt.txt' -> 'DATA_NEW/93665a5c.txt'
+'DATA/29/instance/original.jpg' -> 'DATA_NEW/470385bb.jpg'
+'DATA/29/instance/prompt.txt' -> 'DATA_NEW/470385bb.txt'
+'DATA/30/instance/original.jpg' -> 'DATA_NEW/2df44dc7.jpg'
+'DATA/30/instance/prompt.txt' -> 'DATA_NEW/2df44dc7.txt'
+'DATA/31/instance/original.jpg' -> 'DATA_NEW/a92dfa07.jpg'
+'DATA/31/instance/prompt.txt' -> 'DATA_NEW/a92dfa07.txt'
+'DATA/32/instance/original.jpg' -> 'DATA_NEW/95356e91.jpg'
+'DATA/32/instance/prompt.txt' -> 'DATA_NEW/95356e91.txt'
+'DATA/33/instance/original.jpg' -> 'DATA_NEW/aabad8bd.jpg'
+'DATA/33/instance/prompt.txt' -> 'DATA_NEW/aabad8bd.txt'
+'DATA/34/instance/original.jpg' -> 'DATA_NEW/d1ff40d9.jpg'
+'DATA/34/instance/prompt.txt' -> 'DATA_NEW/d1ff40d9.txt'
+'DATA/35/instance/original.jpg' -> 'DATA_NEW/ff632678.jpg'
+'DATA/35/instance/prompt.txt' -> 'DATA_NEW/ff632678.txt'
+'DATA/36/instance/original.jpg' -> 'DATA_NEW/38bdb9ad.jpg'
+'DATA/36/instance/prompt.txt' -> 'DATA_NEW/38bdb9ad.txt'
+'DATA/37/instance/original.jpg' -> 'DATA_NEW/ae18b67d.jpg'
+'DATA/37/instance/prompt.txt' -> 'DATA_NEW/ae18b67d.txt'
+'DATA/38/instance/original.jpg' -> 'DATA_NEW/66be8d33.jpg'
+'DATA/38/instance/prompt.txt' -> 'DATA_NEW/66be8d33.txt'
+'DATA/39/instance/original.jpg' -> 'DATA_NEW/e88e0b1f.jpg'
+'DATA/39/instance/prompt.txt' -> 'DATA_NEW/e88e0b1f.txt'
+'DATA/40/instance/original.jpg' -> 'DATA_NEW/07f135a4.jpg'
+'DATA/40/instance/prompt.txt' -> 'DATA_NEW/07f135a4.txt'
+'DATA/41/instance/original.jpg' -> 'DATA_NEW/37bf8dcb.jpg'
+'DATA/41/instance/prompt.txt' -> 'DATA_NEW/37bf8dcb.txt'
+'DATA/42/instance/original.jpg' -> 'DATA_NEW/e2b12879.jpg'
+'DATA/42/instance/prompt.txt' -> 'DATA_NEW/e2b12879.txt'
+'DATA/43/instance/original.jpg' -> 'DATA_NEW/03846522.jpg'
+'DATA/43/instance/prompt.txt' -> 'DATA_NEW/03846522.txt'
+'DATA/44/instance/original.jpg' -> 'DATA_NEW/128990ec.jpg'
+'DATA/44/instance/prompt.txt' -> 'DATA_NEW/128990ec.txt'
+'DATA/45/instance/original.jpg' -> 'DATA_NEW/8441e84f.jpg'
+'DATA/45/instance/prompt.txt' -> 'DATA_NEW/8441e84f.txt'
+'DATA/46/instance/original.jpg' -> 'DATA_NEW/2d3e8a69.jpg'
+'DATA/46/instance/prompt.txt' -> 'DATA_NEW/2d3e8a69.txt'
+'DATA/47/instance/original.jpg' -> 'DATA_NEW/99468e42.jpg'
+'DATA/47/instance/prompt.txt' -> 'DATA_NEW/99468e42.txt'
+'DATA/48/instance/original.jpg' -> 'DATA_NEW/15e90fe6.jpg'
+'DATA/48/instance/prompt.txt' -> 'DATA_NEW/15e90fe6.txt'
+'DATA/49/instance/original.jpg' -> 'DATA_NEW/cab0229f.jpg'
+'DATA/49/instance/prompt.txt' -> 'DATA_NEW/cab0229f.txt'
+'DATA/50/instance/original.jpg' -> 'DATA_NEW/b0e5de9d.jpg'
+'DATA/50/instance/prompt.txt' -> 'DATA_NEW/b0e5de9d.txt'
+'DATA/51/instance/original.jpg' -> 'DATA_NEW/52cda5ee.jpg'
+'DATA/51/instance/prompt.txt' -> 'DATA_NEW/52cda5ee.txt'
+'DATA/52/instance/original.jpg' -> 'DATA_NEW/d8f90176.jpg'
+'DATA/52/instance/prompt.txt' -> 'DATA_NEW/d8f90176.txt'
+'DATA/53/instance/original.jpg' -> 'DATA_NEW/706dfdd3.jpg'
+'DATA/53/instance/prompt.txt' -> 'DATA_NEW/706dfdd3.txt'
+'DATA/54/instance/original.jpg' -> 'DATA_NEW/4e17ee1c.jpg'
+'DATA/54/instance/prompt.txt' -> 'DATA_NEW/4e17ee1c.txt'
+'DATA/55/instance/original.jpg' -> 'DATA_NEW/fb160b3c.jpg'
+'DATA/55/instance/prompt.txt' -> 'DATA_NEW/fb160b3c.txt'
+'DATA/56/instance/original.jpg' -> 'DATA_NEW/8dae3224.jpg'
+'DATA/56/instance/prompt.txt' -> 'DATA_NEW/8dae3224.txt'
+'DATA/57/instance/original.jpg' -> 'DATA_NEW/ca8e754e.jpg'
+'DATA/57/instance/prompt.txt' -> 'DATA_NEW/ca8e754e.txt'
+'DATA/58/instance/original.jpg' -> 'DATA_NEW/b90951e2.jpg'
+'DATA/58/instance/prompt.txt' -> 'DATA_NEW/b90951e2.txt'
+'DATA/59/instance/original.jpg' -> 'DATA_NEW/9c22497c.jpg'
+'DATA/59/instance/prompt.txt' -> 'DATA_NEW/9c22497c.txt'
+'DATA/60/instance/original.jpg' -> 'DATA_NEW/f085d32d.jpg'
+'DATA/60/instance/prompt.txt' -> 'DATA_NEW/f085d32d.txt'
+'DATA/61/instance/original.jpg' -> 'DATA_NEW/5522b0a0.jpg'
+'DATA/61/instance/prompt.txt' -> 'DATA_NEW/5522b0a0.txt'
+'DATA/62/instance/original.jpg' -> 'DATA_NEW/bb14c8e7.jpg'
+'DATA/62/instance/prompt.txt' -> 'DATA_NEW/bb14c8e7.txt'
+'DATA/63/instance/original.jpg' -> 'DATA_NEW/d18206a2.jpg'
+'DATA/63/instance/prompt.txt' -> 'DATA_NEW/d18206a2.txt'
+'DATA/64/instance/original.jpg' -> 'DATA_NEW/59639b9e.jpg'
+'DATA/64/instance/prompt.txt' -> 'DATA_NEW/59639b9e.txt'
+'DATA/65/instance/original.jpg' -> 'DATA_NEW/caac01bb.jpg'
+'DATA/65/instance/prompt.txt' -> 'DATA_NEW/caac01bb.txt'
+'DATA/66/instance/original.jpg' -> 'DATA_NEW/339961ad.jpg'
+'DATA/66/instance/prompt.txt' -> 'DATA_NEW/339961ad.txt'
+'DATA/67/instance/original.jpg' -> 'DATA_NEW/cc929c5c.jpg'
+'DATA/67/instance/prompt.txt' -> 'DATA_NEW/cc929c5c.txt'
+'DATA/68/instance/original.jpg' -> 'DATA_NEW/c70657fa.jpg'
+'DATA/68/instance/prompt.txt' -> 'DATA_NEW/c70657fa.txt'
+'DATA/69/instance/original.jpg' -> 'DATA_NEW/54a213a6.jpg'
+'DATA/69/instance/prompt.txt' -> 'DATA_NEW/54a213a6.txt'
+'DATA/70/instance/original.jpg' -> 'DATA_NEW/f07021e1.jpg'
+'DATA/70/instance/prompt.txt' -> 'DATA_NEW/f07021e1.txt'
+'DATA/71/instance/original.jpg' -> 'DATA_NEW/9d9ab1f8.jpg'
+'DATA/71/instance/prompt.txt' -> 'DATA_NEW/9d9ab1f8.txt'
+'DATA/72/instance/original.jpg' -> 'DATA_NEW/162465d7.jpg'
+'DATA/72/instance/prompt.txt' -> 'DATA_NEW/162465d7.txt'
+'DATA/73/instance/original.jpg' -> 'DATA_NEW/e7eae505.jpg'
+'DATA/73/instance/prompt.txt' -> 'DATA_NEW/e7eae505.txt'
+'DATA/74/instance/original.jpg' -> 'DATA_NEW/c558e246.jpg'
+'DATA/74/instance/prompt.txt' -> 'DATA_NEW/c558e246.txt'
+'DATA/75/instance/original.jpg' -> 'DATA_NEW/0e51209a.jpg'
+'DATA/75/instance/prompt.txt' -> 'DATA_NEW/0e51209a.txt'
+'DATA/76/instance/original.jpg' -> 'DATA_NEW/bd303798.jpg'
+'DATA/76/instance/prompt.txt' -> 'DATA_NEW/bd303798.txt'
+'DATA/77/instance/original.jpg' -> 'DATA_NEW/bd303798.jpg'
+'DATA/77/instance/prompt.txt' -> 'DATA_NEW/bd303798.txt'
+'DATA/78/instance/original.jpg' -> 'DATA_NEW/49b0c8f1.jpg'
+'DATA/78/instance/prompt.txt' -> 'DATA_NEW/49b0c8f1.txt'
+'DATA/79/instance/original.jpg' -> 'DATA_NEW/f59e5ed4.jpg'
+'DATA/79/instance/prompt.txt' -> 'DATA_NEW/f59e5ed4.txt'
+'DATA/80/instance/original.jpg' -> 'DATA_NEW/dff275f3.jpg'
+'DATA/80/instance/prompt.txt' -> 'DATA_NEW/dff275f3.txt'
+'DATA/81/instance/original.jpg' -> 'DATA_NEW/b68c2d6d.jpg'
+'DATA/81/instance/prompt.txt' -> 'DATA_NEW/b68c2d6d.txt'
+'DATA/82/instance/original.jpg' -> 'DATA_NEW/6288c4ca.jpg'
+'DATA/82/instance/prompt.txt' -> 'DATA_NEW/6288c4ca.txt'
+'DATA/83/instance/original.jpg' -> 'DATA_NEW/0732ba5b.jpg'
+'DATA/83/instance/prompt.txt' -> 'DATA_NEW/0732ba5b.txt'
+'DATA/84/instance/original.jpg' -> 'DATA_NEW/773ed51c.jpg'
+'DATA/84/instance/prompt.txt' -> 'DATA_NEW/773ed51c.txt'
+'DATA/85/instance/original.jpg' -> 'DATA_NEW/ff475392.jpg'
+'DATA/85/instance/prompt.txt' -> 'DATA_NEW/ff475392.txt'
+'DATA/86/instance/original.jpg' -> 'DATA_NEW/6d972110.jpg'
+'DATA/86/instance/prompt.txt' -> 'DATA_NEW/6d972110.txt'
+'DATA/87/instance/original.jpg' -> 'DATA_NEW/4a6e7039.jpg'
+'DATA/87/instance/prompt.txt' -> 'DATA_NEW/4a6e7039.txt'
+'DATA/88/instance/original.jpg' -> 'DATA_NEW/e925d81d.jpg'
+'DATA/88/instance/prompt.txt' -> 'DATA_NEW/e925d81d.txt'
+'DATA/89/instance/original.jpg' -> 'DATA_NEW/280e6895.jpg'
+'DATA/89/instance/prompt.txt' -> 'DATA_NEW/280e6895.txt'
+'DATA/90/instance/original.jpg' -> 'DATA_NEW/8549b618.jpg'
+'DATA/90/instance/prompt.txt' -> 'DATA_NEW/8549b618.txt'
+'DATA/91/instance/original.jpg' -> 'DATA_NEW/3c5906e8.jpg'
+'DATA/91/instance/prompt.txt' -> 'DATA_NEW/3c5906e8.txt'
+'DATA/92/instance/original.jpg' -> 'DATA_NEW/ea7d4424.jpg'
+'DATA/92/instance/prompt.txt' -> 'DATA_NEW/ea7d4424.txt'
+'DATA/93/instance/original.jpg' -> 'DATA_NEW/b46e67d6.jpg'
+'DATA/93/instance/prompt.txt' -> 'DATA_NEW/b46e67d6.txt'
+'DATA/94/instance/original.jpg' -> 'DATA_NEW/84a17dcc.jpg'
+'DATA/94/instance/prompt.txt' -> 'DATA_NEW/84a17dcc.txt'
+'DATA/95/instance/original.jpg' -> 'DATA_NEW/5b6a04f1.jpg'
+'DATA/95/instance/prompt.txt' -> 'DATA_NEW/5b6a04f1.txt'
+'DATA/96/instance/original.jpg' -> 'DATA_NEW/b2eb0baf.jpg'
+'DATA/96/instance/prompt.txt' -> 'DATA_NEW/b2eb0baf.txt'
+'DATA/97/instance/original.jpg' -> 'DATA_NEW/11669276.jpg'
+'DATA/97/instance/prompt.txt' -> 'DATA_NEW/11669276.txt'
+'DATA/98/instance/original.jpg' -> 'DATA_NEW/54932c2c.jpg'
+'DATA/98/instance/prompt.txt' -> 'DATA_NEW/54932c2c.txt'
+'DATA/99/instance/original.jpg' -> 'DATA_NEW/9a1406d7.jpg'
+'DATA/99/instance/prompt.txt' -> 'DATA_NEW/9a1406d7.txt'
+'DATA/100/instance/original.jpg' -> 'DATA_NEW/72e29b66.jpg'
+'DATA/100/instance/prompt.txt' -> 'DATA_NEW/72e29b66.txt'
+'DATA/101/instance/original.jpg' -> 'DATA_NEW/d55ba0f0.jpg'
+'DATA/101/instance/prompt.txt' -> 'DATA_NEW/d55ba0f0.txt'
+'DATA/102/instance/original.jpg' -> 'DATA_NEW/d57978b9.jpg'
+'DATA/102/instance/prompt.txt' -> 'DATA_NEW/d57978b9.txt'
+'DATA/103/instance/original.jpg' -> 'DATA_NEW/8da802b8.jpg'
+'DATA/103/instance/prompt.txt' -> 'DATA_NEW/8da802b8.txt'
+'DATA/104/instance/original.jpg' -> 'DATA_NEW/b2dcd040.jpg'
+'DATA/104/instance/prompt.txt' -> 'DATA_NEW/b2dcd040.txt'
+'DATA/105/instance/original.jpg' -> 'DATA_NEW/e3c86834.jpg'
+'DATA/105/instance/prompt.txt' -> 'DATA_NEW/e3c86834.txt'
+'DATA/106/instance/original.jpg' -> 'DATA_NEW/344f0a01.jpg'
+'DATA/106/instance/prompt.txt' -> 'DATA_NEW/344f0a01.txt'
+'DATA/107/instance/original.jpg' -> 'DATA_NEW/e35a4d6c.jpg'
+'DATA/107/instance/prompt.txt' -> 'DATA_NEW/e35a4d6c.txt'
+'DATA/108/instance/original.jpg' -> 'DATA_NEW/4c1a70b4.jpg'
+'DATA/108/instance/prompt.txt' -> 'DATA_NEW/4c1a70b4.txt'
+'DATA/109/instance/original.jpg' -> 'DATA_NEW/5ff289f1.jpg'
+'DATA/109/instance/prompt.txt' -> 'DATA_NEW/5ff289f1.txt'
+'DATA/110/instance/original.jpg' -> 'DATA_NEW/95096d3a.jpg'
+'DATA/110/instance/prompt.txt' -> 'DATA_NEW/95096d3a.txt'
+'DATA/111/instance/original.png' -> 'DATA_NEW/61d6d3a3.png'
+'DATA/111/instance/prompt.txt' -> 'DATA_NEW/61d6d3a3.txt'
+'DATA/112/instance/original.png' -> 'DATA_NEW/48d0c03f.png'
+'DATA/112/instance/prompt.txt' -> 'DATA_NEW/48d0c03f.txt'
+#+end_example
+
+#+begin_src python :shebang #!/home/asd/.conda/envs/img2prompt/bin/python :results output
+  for i in range(113):
+      print('./copy_original.sh ',i)
+#+end_src

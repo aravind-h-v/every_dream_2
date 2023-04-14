@@ -4,7 +4,7 @@
 
 *** The commit message:
 #+begin_src conf :tangle message.txt
-  Minor changes to clone git repo 2
+  Fixed with stuff to get realistic stuff
 #+end_src
 
 *** Files to add:
@@ -15,6 +15,7 @@
   activate.sh
   install.sh
   configs.py
+  image_reorganize.org
 #+end_src
 
 *** Files to remove:
@@ -85,7 +86,6 @@ Your branch is up to date with 'origin/master'.
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
 	modified:   README.org
-	modified:   install.sh
 	modified:   main.org
 
 Untracked files:
@@ -102,6 +102,7 @@ Untracked files:
 #+end_src
 
 #+RESULTS:
-: [master 1c46500] Minor changes to clone git repo 2
-:  3 files changed, 105 insertions(+), 12 deletions(-)
+: [master 9e8baf0] Minor changes to clone git repo 2
+:  4 files changed, 57 insertions(+), 3 deletions(-)
+:  create mode 100755 configs.py
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

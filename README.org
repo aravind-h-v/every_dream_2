@@ -100,18 +100,48 @@ https://github.com/victorchall/EveryDream2trainer.git
   git clone 'https://github.com/victorchall/EveryDream2trainer.git'
 #+end_src
 
-
-** Save the buffer and tangle the files:
-#+begin_src emacs-lisp :results output
-  (save-buffer) 
-  (org-babel-tangle)
+** cd to the dir and download the model:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
+  cd 'EveryDream2trainer'
+  aria2c -c -x16 'https://huggingface.co/panopstor/EveryDream/resolve/main/sd_v1-5_vae.ckpt'
+  aria2c -c -x16 'https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-nonema-pruned.ckpt'
 #+end_src
 
-#+RESULTS:
+** Convert the data:
+
+*** SD1.5
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  python \
+      'utils/convert_original_stable_diffusion_to_diffusers.py' \
+          '--scheduler_type' 'ddim' \
+          '--image_size' '512' \
+          '--checkpoint_path' 'sd_v1-5_vae.ckpt' \
+          '--prediction_type' 'epsilon' \
+          '--upcast_attn' 'False' \
+          '--dump_path' 'ckpt_cache/sd_v1-5_vae' \
+  ;
+
+          # '--original_config_file' 'v1-inference.yaml' \
+#+end_src
+
+*** SD2.1
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  python \
+      'utils/convert_original_stable_diffusion_to_diffusers.py' \
+          '--scheduler_type' 'ddim' \
+          '--image_size' '768' \
+          '--checkpoint_path' 'v2-1_768-nonema-pruned.ckpt' \
+          '--prediction_type' 'v_prediction' \
+          '--upcast_attn' 'True' \
+          '--dump_path' 'ckpt_cache/v2-1_768-nonema-pruned' \
+  ;
+
+          # '--original_config_file' 'v2-inference-v.yaml' \
+#+end_src
 
 * Run the everydream2 trainer:
 
-#+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
 
   python ./train.py \
@@ -130,6 +160,23 @@ https://github.com/victorchall/EveryDream2trainer.git
       '--project_name=owhx' \
       '--resolution=512' \
       '--resume_ckpt=runwayml/stable-diffusion-v1-5' \
+  ;
+#+end_src
+
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+
+  python train.py \
+      '--resume_ckpt' 'sd_v1-5_vae' \
+      '--max_epochs' '50' \
+      '--data_root' 'input' \
+      '--lr_scheduler' 'constant' \
+      '--project_name' 'myproj' \
+      '--batch_size' '6' \
+      '--sample_steps' '200' \
+      '--lr' '3e-6' \
+      '--ckpt_every_n_minutes' '20' \
+      '--useadam8bit' \
   ;
 #+end_src
 
@@ -181,3 +228,13 @@ https://github.com/victorchall/EveryDream2trainer.git
   ("--rated_dataset_target_dropout_percent", type=int, default=50, help="how many images (in percent) should be included in the last epoch (Default 50)")
   ("--zero_frequency_noise_ratio", type=float, default=0.02, help="adds zero frequency noise, for improving contrast (def: 0.0) use 0.0 to 0.15")
 #+end_src
+
+* Finalizing:
+
+** Save the buffer and tangle the files:
+#+begin_src emacs-lisp :results output
+  (save-buffer) 
+  (org-babel-tangle)
+#+end_src
+
+#+RESULTS:
