@@ -9,30 +9,28 @@
 
 *** Files to add:
 #+begin_src conf :tangle git_add.txt
-  main.org
-  .gitignore
-  README.org
   activate.sh
-  install.sh
   configs.py
+  .gitignore
   image_reorganize.org
+  install.sh
+  main.org
+  README.org
 #+end_src
 
 *** Files to remove:
 #+begin_src conf :tangle rm.txt
-  .#main.org
-  .main.org.~undo-tree~
   #main.org#
-  main.org~
-  .README.org.~undo-tree~
   .#main.org
-  .README.org.~undo-tree~
+  main.org~
   .main.org.~undo-tree~
+  .README.org.~undo-tree~
 #+end_src
 
 *** Files to ignore:
 #+begin_src conf :tangle .gitignore
   EveryDream2trainer
+  every_dream_output/
   git_add.sh
   git_add.txt
   #main.org#
@@ -44,9 +42,8 @@
   shrc_activate.sh
   shrc_install.sh
   tmp.sh
-  every_dream_output/
-  v1-inference.yaml
   trained_models/
+  v1-inference.yaml
 #+end_src
 
 ** The actual scripts to do the dirty work:
@@ -82,18 +79,14 @@
 #+RESULTS:
 #+begin_example
 removed '.main.org.~undo-tree~'
-removed '.README.org.~undo-tree~'
 On branch master
 Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
+	modified:   .gitignore
 	modified:   README.org
 	modified:   main.org
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	
 
 #+end_example
 
@@ -105,6 +98,6 @@ Untracked files:
 #+end_src
 
 #+RESULTS:
-: [master 1468efb] Experiments to fix the blank image problem
-:  3 files changed, 90 insertions(+), 20 deletions(-)
+: [master 476d1eb] Every dream 2 working
+:  3 files changed, 20 insertions(+), 18 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.
