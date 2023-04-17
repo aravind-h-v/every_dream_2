@@ -107,9 +107,37 @@ https://github.com/victorchall/EveryDream2trainer.git
   aria2c -c -x16 'https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-nonema-pruned.ckpt'
 #+end_src
 
+** Prepare diffusers:
+
+*** Download the repo:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
+  cd "${HOME}"
+  mkdir -pv -- 'huggingface'
+  cd 'huggingface'
+  git clone 'https://github.com/huggingface/diffusers.git'
+#+end_src
+
+*** Install diffusers:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./install.sh
+  cd 'diffusers'
+  pip install -e .
+#+end_src
+
 ** Convert the data:
 
 *** SD1.5
+
+**** Using original diffusers script:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  python \
+      "${HOME}/huggingface/diffusers/scripts/convert_original_stable_diffusion_to_diffusers.py" \
+      --checkpoint_path "${HOME}/every_dream_2_setup/EveryDream2trainer/sd_v1-5_vae.ckpt" \
+      --image_size 512 \
+      --dump_path "${HOME}/every_dream_2_setup/EveryDream2trainer/sd_v1-5_vae.dir" \
+  ;
+#+end_src
+
+**** Using everydream scripts:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   python \
       'utils/convert_original_stable_diffusion_to_diffusers.py' \
@@ -120,11 +148,21 @@ https://github.com/victorchall/EveryDream2trainer.git
           '--upcast_attn' 'False' \
           '--dump_path' 'ckpt_cache/sd_v1-5_vae' \
   ;
-
-          # '--original_config_file' 'v1-inference.yaml' \
 #+end_src
 
 *** SD2.1
+
+**** Using original diffusers script:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  python \
+      "${HOME}/huggingface/diffusers/scripts/convert_original_stable_diffusion_to_diffusers.py" \
+      --checkpoint_path "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.ckpt" \
+      --image_size 768 \
+      --dump_path "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
+  ;
+#+end_src
+
+**** Using everydream scripts:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   python \
       'utils/convert_original_stable_diffusion_to_diffusers.py' \
@@ -164,21 +202,22 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+end_src
 
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
-  cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+    cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
 
-  python train.py \
-      '--resume_ckpt' 'sd_v1-5_vae' \
-      '--max_epochs' '50' \
-      '--data_root' 'input' \
-      '--lr_scheduler' 'constant' \
-      '--project_name' 'myproj' \
-      '--batch_size' '6' \
-      '--sample_steps' '200' \
-      '--lr' '3e-6' \
-      '--ckpt_every_n_minutes' '20' \
-      '--useadam8bit' \
-  ;
+    python train.py \
+	'--resume_ckpt' "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
+	'--max_epochs' '50' \
+	'--data_root' 'input' \
+	'--lr_scheduler' 'constant' \
+	'--project_name' 'owhx2' \
+	'--batch_size' '6' \
+	'--sample_steps' '3000' \
+	'--lr' '2e-7' \
+	'--ckpt_every_n_minutes' '20' \
+	'--useadam8bit' \
+    ;
 #+end_src
+
 
 ** Allowed options:
 #+begin_src python :shebang #!/home/asd/.conda/envs/img2prompt/bin/python :results output :tangle ./configs.py
@@ -229,6 +268,32 @@ https://github.com/victorchall/EveryDream2trainer.git
   ("--zero_frequency_noise_ratio", type=float, default=0.02, help="adds zero frequency noise, for improving contrast (def: 0.0) use 0.0 to 0.15")
 #+end_src
 
+* Convert the final ckpt to huggingface:
+
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  # python \
+  #     '/home/asd/every_dream_2_setup/EveryDream2trainer/utils/convert_original_stable_diffusion_to_diffusers.py' \
+  #     '--scheduler_type' 'ddim' \
+  #     '--image_size' '512' \
+  #     '--checkpoint_path' '/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.ckpt' \
+  #     '--prediction_type' 'epsilon' \
+  #     '--upcast_attn' 'False' \
+  #     '--dump_path' '/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.dir' \
+  # ;
+
+
+  python \
+      '/home/asd/huggingface/diffusers/scripts/convert_original_stable_diffusion_to_diffusers.py' \
+	  --checkpoint_path \
+	      '/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.ckpt' \
+	  --image_size 512 \
+	  --dump_path \
+	      '/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.dir' \
+  ;
+
+  # --from_safetensors \
+#+end_src
+
 * Finalizing:
 
 ** Save the buffer and tangle the files:
@@ -238,3 +303,5 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+end_src
 
 #+RESULTS:
+
+/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.dir

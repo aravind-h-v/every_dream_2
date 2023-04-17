@@ -4,7 +4,7 @@
 
 *** The commit message:
 #+begin_src conf :tangle message.txt
-  Fixed with stuff to get realistic stuff
+  Experiments to fix the blank image problem
 #+end_src
 
 *** Files to add:
@@ -44,6 +44,8 @@
   shrc_activate.sh
   shrc_install.sh
   tmp.sh
+  every_dream_output/
+  v1-inference.yaml
 #+end_src
 
 ** The actual scripts to do the dirty work:
@@ -90,7 +92,6 @@ Changes to be committed:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
-	
 
 #+end_example
 
@@ -102,7 +103,7 @@ Untracked files:
 #+end_src
 
 #+RESULTS:
-: [master 9e8baf0] Minor changes to clone git repo 2
-:  4 files changed, 57 insertions(+), 3 deletions(-)
-:  create mode 100755 configs.py
+: [master 6e10c2d] Fixed with stuff to get realistic stuff
+:  3 files changed, 1587 insertions(+), 10 deletions(-)
+:  create mode 100644 image_reorganize.org
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

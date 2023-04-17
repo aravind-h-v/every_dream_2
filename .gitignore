@@ -10,3 +10,5 @@ rm.txt
 shrc_activate.sh
 shrc_install.sh
 tmp.sh
+every_dream_output/
+v1-inference.yaml
