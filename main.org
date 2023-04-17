@@ -4,7 +4,7 @@
 
 *** The commit message:
 #+begin_src conf :tangle message.txt
-  Experiments to fix the blank image problem
+  Every dream 2 working
 #+end_src
 
 *** Files to add:
@@ -46,6 +46,7 @@
   tmp.sh
   every_dream_output/
   v1-inference.yaml
+  trained_models/
 #+end_src
 
 ** The actual scripts to do the dirty work:
@@ -92,6 +93,7 @@ Changes to be committed:
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
+	
 
 #+end_example
 
@@ -103,7 +105,6 @@ Untracked files:
 #+end_src
 
 #+RESULTS:
-: [master 6e10c2d] Fixed with stuff to get realistic stuff
-:  3 files changed, 1587 insertions(+), 10 deletions(-)
-:  create mode 100644 image_reorganize.org
+: [master 1468efb] Experiments to fix the blank image problem
+:  3 files changed, 90 insertions(+), 20 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

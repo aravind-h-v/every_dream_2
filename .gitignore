@@ -12,3 +12,4 @@ shrc_install.sh
 tmp.sh
 every_dream_output/
 v1-inference.yaml
+trained_models/

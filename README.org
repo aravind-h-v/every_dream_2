@@ -202,20 +202,20 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+end_src
 
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
-    cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+  cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
 
-    python train.py \
-	'--resume_ckpt' "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
-	'--max_epochs' '50' \
-	'--data_root' 'input' \
-	'--lr_scheduler' 'constant' \
-	'--project_name' 'owhx2' \
-	'--batch_size' '6' \
-	'--sample_steps' '3000' \
-	'--lr' '2e-7' \
-	'--ckpt_every_n_minutes' '20' \
-	'--useadam8bit' \
-    ;
+  python train.py \
+      '--resume_ckpt' "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
+      '--max_epochs' '50' \
+      '--data_root' "${HOME}/every_dream_2_setup/EveryDream2trainer/input" \
+      '--lr_scheduler' 'constant' \
+      '--project_name' 'owhx2' \
+      '--batch_size' '6' \
+      '--sample_steps' '3000' \
+      '--lr' '2e-7' \
+      '--ckpt_every_n_minutes' '20' \
+      '--useadam8bit' \
+  ;
 #+end_src
 
 
