@@ -15,6 +15,7 @@
   image_reorganize.org
   install.sh
   main.org
+  run.sh
   README.org
 #+end_src
 
@@ -79,14 +80,19 @@
 #+RESULTS:
 #+begin_example
 removed '.main.org.~undo-tree~'
+removed '.README.org.~undo-tree~'
 On branch master
 Your branch is up to date with 'origin/master'.
 
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
-	modified:   .gitignore
 	modified:   README.org
+	modified:   activate.sh
+	modified:   install.sh
 	modified:   main.org
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
 #+end_example
 
@@ -98,6 +104,6 @@ Changes to be committed:
 #+end_src
 
 #+RESULTS:
-: [master 476d1eb] Every dream 2 working
-:  3 files changed, 20 insertions(+), 18 deletions(-)
+: [master 65afc9f] Every dream 2 working
+:  2 files changed, 13 insertions(+), 20 deletions(-)
 : Branch 'master' set up to track remote branch 'master' from 'origin'.

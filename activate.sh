@@ -1,4 +1,6 @@
 #!/bin/sh
+sudo apt-get install cpio zstd aria2
+
 . /opt/anaconda/bin/activate
 conda activate everydream
 

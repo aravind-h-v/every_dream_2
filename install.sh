@@ -61,22 +61,14 @@ pip install -U \
 
 git clone 'https://github.com/victorchall/EveryDream2trainer.git'
 
-cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+cd 'EveryDream2trainer'
+aria2c -c -x16 'https://huggingface.co/panopstor/EveryDream/resolve/main/sd_v1-5_vae.ckpt'
+aria2c -c -x16 'https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-nonema-pruned.ckpt'
 
-python ./train.py \
-    '--batch_size=2' \
-    '--ckpt_every_n_minutes=20' \
-    '--cond_dropout=0.04' \
-    '--data_root=input.dir' \
-    '--flip_p=0.0' \
-    '--gradient_checkpointing' \
-    '--grad_accum=1' \
-    '--logdir=log.dir' \
-    '--log_step=25' \
-    '--lowvram' \
-    '--lr=0.0000002' \
-    '--max_epochs=30' \
-    '--project_name=owhx' \
-    '--resolution=512' \
-    '--resume_ckpt=runwayml/stable-diffusion-v1-5' \
-;
+cd "${HOME}"
+mkdir -pv -- 'huggingface'
+cd 'huggingface'
+git clone 'https://github.com/huggingface/diffusers.git'
+
+cd 'diffusers'
+pip install -e .

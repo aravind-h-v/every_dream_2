@@ -1,9 +1,17 @@
 * Important links:
 
+** Dataset link:
+s3://instance.segmentation.aravind-1/every_dream_2_train_dataset.cpio
+
 ** Everydream2 code:
 https://github.com/victorchall/EveryDream2trainer.git
 
 * Env activate parts:
+
+** Install basic depdendencies:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./activate.sh
+  sudo apt-get install cpio zstd aria2
+#+end_src
 
 ** Create and activate the env:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./activate.sh
@@ -137,7 +145,7 @@ https://github.com/victorchall/EveryDream2trainer.git
   ;
 #+end_src
 
-**** Using everydream scripts:
+**** COMMENT Using everydream scripts:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   python \
       'utils/convert_original_stable_diffusion_to_diffusers.py' \
@@ -162,7 +170,7 @@ https://github.com/victorchall/EveryDream2trainer.git
   ;
 #+end_src
 
-**** Using everydream scripts:
+**** COMMENT Using everydream scripts:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   python \
       'utils/convert_original_stable_diffusion_to_diffusers.py' \
@@ -179,6 +187,26 @@ https://github.com/victorchall/EveryDream2trainer.git
 
 * Run the everydream2 trainer:
 
+** Working:
+#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
+  cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
+
+  python train.py \
+      '--resume_ckpt' "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
+      '--max_epochs' '50' \
+      '--data_root' "${HOME}/every_dream_2_setup/EveryDream2trainer/input" \
+      '--logdir=log.dir' \
+      '--lr_scheduler' 'constant' \
+      '--project_name' 'owhx2' \
+      '--batch_size' '6' \
+      '--sample_steps' '500' \
+      '--lr' '2e-7' \
+      '--ckpt_every_n_minutes' '20' \
+      '--useadam8bit' \
+  ;
+#+end_src
+
+** COMMENT Long options:
 #+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
   cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
 
@@ -198,23 +226,6 @@ https://github.com/victorchall/EveryDream2trainer.git
       '--project_name=owhx' \
       '--resolution=512' \
       '--resume_ckpt=runwayml/stable-diffusion-v1-5' \
-  ;
-#+end_src
-
-#+begin_src sh :shebang #!/bin/sh :results output :tangle ./run.sh
-  cd "${HOME}/every_dream_2_setup/EveryDream2trainer"
-
-  python train.py \
-      '--resume_ckpt' "${HOME}/every_dream_2_setup/EveryDream2trainer/v2-1_768-nonema-pruned.dir" \
-      '--max_epochs' '50' \
-      '--data_root' "${HOME}/every_dream_2_setup/EveryDream2trainer/input" \
-      '--lr_scheduler' 'constant' \
-      '--project_name' 'owhx2' \
-      '--batch_size' '6' \
-      '--sample_steps' '3000' \
-      '--lr' '2e-7' \
-      '--ckpt_every_n_minutes' '20' \
-      '--useadam8bit' \
   ;
 #+end_src
 
@@ -303,5 +314,3 @@ https://github.com/victorchall/EveryDream2trainer.git
 #+end_src
 
 #+RESULTS:
-
-/home/asd/every_dream_2_setup/every_dream_output/last-myproj-ep49-gs10450.dir
